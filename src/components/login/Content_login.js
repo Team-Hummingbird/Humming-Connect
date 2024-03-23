@@ -31,37 +31,41 @@ function Content_login(){
             <div className={contentStyle.loginDiv}>
                 <div className={contentStyle.loginBox}>
                     <div className={contentStyle.input}>
-                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='  아이디' />
+                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='아이디' />
                     </div>
                     <div className={contentStyle.input}>
-                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='  패스워드'/>
+                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='패스워드'/>
                     </div>
                     <div className={contentStyle.text}>
                         <ul className={contentStyle.loginCheackBox}>
-                            <li><input type='checkbox'/></li> 
-                            <li>로그인 유지</li>
+                            <li><input id="keep" type='checkbox'/></li>
+                            <label for="keep" className={contentStyle.loginSave}>로그인 유지</label> 
+                            
                         </ul>
                     </div>
 
                     <div>
+                        <Link to="../main" className={contentStyle.text_button}>
                         <button className={contentStyle.button}>로그인</button>
+                        </Link>
+
                         <ul className={contentStyle.ul2}>
                             <li className={contentStyle.li}>
-                                <a>
+                                <Link >
                                     <span className={contentStyle.text}>아이디 찾기</span>
-                                </a>
+                                </Link>
                             </li>
                             <li className={contentStyle.li}>
                                 <span className={contentStyle.text}>|</span>
-                                <a>
+                                <Link>
                                     <span className={contentStyle.text}>비밀번호 찾기</span>
-                                </a>
+                                </Link>
                                 <span className={contentStyle.text}>|</span>
                             </li>
                             <li className={contentStyle.li}>
-                                <a>
+                                <Link>
                                     <span className={contentStyle.text}>회원 가입</span>
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

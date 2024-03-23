@@ -34,6 +34,7 @@
     margin-bottom: 20px;
     font-size:12px;
     line-height: 15px;
+    
 
 }
 .text{
@@ -43,6 +44,36 @@
     letter-spacing: -.5px;
     color: #888;
     text-align: center;
+}
+.text_button{
+    margin: 10px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffff;
+    text-align: center;
+    
+}
+.phoneButton{
+    display:inline;
+    position: absolute;
+    margin-left: -70px;
+    margin-top: 10px;
+    height: 25px;
+    width: 60px;
+    border-radius: 20px;
+    color: #888;
+    border: 1px solid #e3e3e3;
+    cursor: pointer;
+}
+.loginSave{
+    margin: 0px;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: -.5px;
+    color: #888;
+    text-align: center;
+    padding-left: 5px;
+    cursor: pointer;
 }
 
 .contentInner{
@@ -56,7 +87,8 @@
     margin: 0 auto;
     position: relative;
     height: 60px;
-    width: 170px;
+    max-width: 170px;
+    min-width: 170px;
     padding-top: 17px;
     border: 2px solid #e3e3e3;
     border-bottom: 0;
@@ -89,6 +121,7 @@
 
 
 .input{
+    
     padding-bottom: 20px;
     display: table;
     table-layout: fixed;
@@ -103,7 +136,7 @@
     height: 50px;
     width : 410px;
     margin: 0 auto;
-
+    padding-left: 10px;
 }
 
 
@@ -152,7 +185,7 @@
     border: 1px solid #e3e3e3;
     box-sizing: border-box;
     border-radius: 5px;
-
+    cursor: pointer;
 }
 
 .easyLoginButton{

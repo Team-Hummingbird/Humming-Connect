@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import footerStyle from './Footer_login.module.css'
 function Footer_login(){
 
@@ -7,21 +8,21 @@ function Footer_login(){
             <div className={footerStyle.footerInner}>
                 <ul className={footerStyle.ul}>
                     <li className={footerStyle.li}>
-                        <a>
+                        <Link>
                             <span className={footerStyle.text}>About us</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className={footerStyle.li}>
                         <span className={footerStyle.text}>|</span>
-                        <a>
+                        <Link>
                             <span className={footerStyle.text}>Terms of Use</span>
-                        </a>
+                        </Link>
                         <span className={footerStyle.text}>|</span>
                     </li>
                     <li className={footerStyle.li}>
-                        <a>
+                        <Link>
                             <span className={footerStyle.text}>Privacy Policy</span>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 <ul className={footerStyle.copyRights}>2024 Humming Connect . All Rights Reserved</ul>
