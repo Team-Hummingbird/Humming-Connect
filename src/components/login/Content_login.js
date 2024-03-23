@@ -51,7 +51,7 @@ function Content_login(){
 
                         <ul className={contentStyle.ul2}>
                             <li className={contentStyle.li}>
-                                <Link >
+                                <Link>
                                     <span className={contentStyle.text}>아이디 찾기</span>
                                 </Link>
                             </li>
