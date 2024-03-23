@@ -19,7 +19,7 @@ export default function Footer(){
             </NavLink>
           </div>
           <ul className={footerStyle.footer_menu}>
-            <li><NavLink to='about'>About</NavLink></li>
+            <li><NavLink to='/about'>About</NavLink></li>
             <li><NavLink to='https://www.artsy.net/terms' target='blank_'>Terms of Use</NavLink></li>
             <li><NavLink to='https://www.artsy.net/privacy' target='blank_'>Privacy Policy</NavLink></li>
           </ul>

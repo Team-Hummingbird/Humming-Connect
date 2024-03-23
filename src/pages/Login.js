@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
-export default function Login(props){;
+//로그인 상태 여부에 따라 header 변경하기 위한 샘플 로그인 화면
+// ID : user01  PW : user01
+export default function Login(props){
 
   const [user, setUser] = useState({
     username : '',
     password : '',
-    isLogin : false,
   });
 
   const navigate = useNavigate();
@@ -20,8 +20,6 @@ export default function Login(props){;
   }
 
   const onClickHandler = () => {
-    // ((user.username === 'user01') && (user.password === 'user01')) ? 
-    // navigate('/main') : alert('입력한 아이디 또는 비밀번호가 일치하지 않습니다. \n 다시 입력해주세요🖼');
     if((user.username === 'user01') && (user.password === 'user01')){
       setUser({
         username : '',
@@ -36,12 +34,12 @@ export default function Login(props){;
   }
 
   useEffect(
-    () => {console.log('username : ' + user.username)},
+    () => {},
     [user.username]
   );
 
   useEffect(
-    () => {console.log('password : ' + user.password)},
+    () => {},
     [user.password]
   );
 
