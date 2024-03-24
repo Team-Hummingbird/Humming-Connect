@@ -49,11 +49,11 @@ input::-webkit-search-results-decoration{
 
 
 /* pagination */
+.d_none {display: none;}
 .pagination {display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 452px; margin: 0 auto;}
-.pagination.d_none {display: none;}
-.pagination .prevBtn, .pagination .nextBtn {display: block; width: 24px; height: 24px; background-position: center; background-size: cover; background-repeat: no-repeat; cursor: pointer;}
-.pagination .prevBtn {background-image: url('../../public/img/prev.svg'); }
-.pagination .nextBtn {background-image: url('../../public/img/next.svg'); }
+.prevBtn, .nextBtn {display: block; width: 24px; height: 24px; background-position: center; background-size: cover; background-repeat: no-repeat; cursor: pointer;}
+.prevBtn {background-image: url('../../public/img/prev.svg'); }
+.nextBtn {background-image: url('../../public/img/next.svg'); }
 .pagination > ul {display: flex; justify-content: space-between; align-items: center;}
 .pagination > ul > li > a{display: flex; justify-content: center; align-items: center; width: 24px; height: 24px; border-radius:2px; color: #28282a;}
 .pagination > ul > li.active > a {background-color: #28282a; color:#ffffff; transition: background-color 300ms ease-in-out;}
