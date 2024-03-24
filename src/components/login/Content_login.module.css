@@ -34,9 +34,8 @@
     margin-bottom: 20px;
     font-size:12px;
     line-height: 15px;
-    
-
 }
+
 .text{
     margin: 10px;
     font-size: 12px;
@@ -45,6 +44,16 @@
     color: #888;
     text-align: center;
 }
+.text_find{
+    padding-bottom: 40px;
+    margin: 10px;
+    font-size: 20px;
+    line-height: 15px;
+    letter-spacing: -.5px;
+    color: #888;
+    text-align: center;
+}
+
 .text_button{
     margin: 10px;
     font-size: 12px;
@@ -155,7 +164,7 @@
     margin: 0 auto;
     /* box-shadow: 0px 3px 3px 0px rgba(136, 139, 139, 0.507); */
 }
-.easyLoginBox{
+.findIdBox{
     display: block;
     position: relative;
     text-align: center;
@@ -163,7 +172,7 @@
     padding-bottom: 50px;
     border: 2px solid #e3e3e3;
     box-sizing: border-box;
-    border-radius: 0 0 20px 20px;
+    border-radius: 20px 20px 20px 20px;
     max-width: 510px;
     min-height: 450px;
     max-height: 450px;

@@ -51,13 +51,13 @@ function Content_phoneLogin(){
                         </Link>
                         <ul className={contentStyle.ul2}>
                             <li className={contentStyle.li}>
-                                <Link>
+                                <Link to="../findId">
                                     <span className={contentStyle.text}>아이디 찾기</span>
                                 </Link>
                             </li>
                             <li className={contentStyle.li}>
                                 <span className={contentStyle.text}>|</span>
-                                <Link>
+                                <Link to="../findPwd">
                                     <span className={contentStyle.text}>비밀번호 찾기</span>
                                 </Link>
                                 <span className={contentStyle.text}>|</span>

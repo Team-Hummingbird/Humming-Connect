@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Content_login(){
 
-
+    
     return(
         <>
         <div>
@@ -42,7 +42,7 @@ function Content_login(){
                     <div className={contentStyle.text}>
                         <ul className={contentStyle.loginCheackBox}>
                             <li><input id="keep" type='checkbox'/></li>
-                            <label for="keep" className={contentStyle.loginSave}>로그인 유지</label> 
+                            <label htmlFor="keep" className={contentStyle.loginSave}>로그인 유지</label> 
                             
                         </ul>
                     </div>
@@ -54,13 +54,13 @@ function Content_login(){
 
                         <ul className={contentStyle.ul2}>
                             <li className={contentStyle.li}>
-                                <Link>
+                                <Link to="../findId">
                                     <span className={contentStyle.text}>아이디 찾기</span>
                                 </Link>
                             </li>
                             <li className={contentStyle.li}>
                                 <span className={contentStyle.text}>|</span>
-                                <Link>
+                                <Link to="../findPwd">
                                     <span className={contentStyle.text}>비밀번호 찾기</span>
                                 </Link>
                                 <span className={contentStyle.text}>|</span>

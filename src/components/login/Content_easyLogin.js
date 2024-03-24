@@ -10,9 +10,9 @@ function Content_easyLogin(){
             <div className={contentStyle.contentInner}> 
                 <ul className={contentStyle.ul}>
                     <li className={contentStyle.li}>
-                        <a herf="../login" className={contentStyle.menuId} role='tab'>
+                        <Link to="../login" className={contentStyle.menuId} role='tab'>
                             <span>ID 로그인</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className={contentStyle.li}>
                         <Link to="" className={contentStyle.on} role='tab'>
@@ -56,13 +56,13 @@ function Content_easyLogin(){
                     <div>
                         <ul className={contentStyle.ul2}>
                             <li className={contentStyle.li}>
-                                <Link>
+                                <Link to="../findId">
                                     <span className={contentStyle.text}>아이디 찾기</span>
                                 </Link>
                             </li>
                             <li className={contentStyle.li}>
                                 <span className={contentStyle.text}>|</span>
-                                <Link>
+                                <Link to="../findPwd">
                                     <span className={contentStyle.text}>비밀번호 찾기</span>
                                 </Link>
                                 <span className={contentStyle.text}>|</span>
