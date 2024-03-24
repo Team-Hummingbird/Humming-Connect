@@ -20,12 +20,15 @@ function Content_login(){
                         </Link>
                         </li>
                     <li className={contentStyle.li}>
+
+                        
                         <Link to="../PhoneLogin" className={contentStyle.menuId} role='tab'>
                             <span>전화번호 로그인</span>
                         </Link>
                         </li>
                 </ul>
             </div>
+            
 
         <div className='idTap'>
             <div className={contentStyle.loginDiv}>

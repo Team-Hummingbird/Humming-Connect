@@ -10,9 +10,9 @@ function Content_easyLogin(){
             <div className={contentStyle.contentInner}> 
                 <ul className={contentStyle.ul}>
                     <li className={contentStyle.li}>
-                        <Link to="../login" className={contentStyle.menuId} role='tab'>
+                        <a herf="../login" className={contentStyle.menuId} role='tab'>
                             <span>ID 로그인</span>
-                        </Link>
+                        </a>
                     </li>
                     <li className={contentStyle.li}>
                         <Link to="" className={contentStyle.on} role='tab'>
