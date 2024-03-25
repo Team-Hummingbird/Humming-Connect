@@ -9,7 +9,7 @@ function Company() {
             <img 
             className={style.companyImg}
             alt="사진"
-            src="1-550x416 1.png"
+            src="aboutPageImg.png"
             />
         </div>
 
@@ -61,7 +61,7 @@ function Company() {
                 <a href="/Main">
                 <img 
                 alt=""
-                src="Group 84.png"
+                src="aboutPageLogo.png"
                 />
                 </a>
             </div>
