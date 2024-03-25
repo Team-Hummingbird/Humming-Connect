@@ -1,4 +1,4 @@
-import style from "./Company.module.css"
+import style from "./About.module.css"
 
 function Company() {
     
