@@ -1,0 +1,84 @@
+{
+    "members": [
+      {
+        "memberNumber": 1,
+        "id": "zeze123",
+        "password": "zeze123!!",
+        "name": "고길동",
+        "email": "zeze123@gmail.com",
+        "address": "서울특별시 강남구 태란로 888",
+        "phoneNumber": "010-1234-5678",
+        "sellData": [
+          {
+            "date": "2024-03-20",
+            "price": 0,
+            "orderStatus": "배송중"
+          },
+          {
+            "date": "2024-03-18",
+            "price": 0,
+            "orderStatus": "배송완료"
+          }
+        ],
+        "buyData": [
+          {
+            "date": "2024-03-15",
+            "price": 0,
+            "orderStatus": "주문완료"
+          },
+          {
+            "date": "2024-03-19",
+            "price": 0,
+            "orderStatus": "배송중"
+          }
+        ]
+      },
+      {
+        "memberNumber": 2,
+        "id": "xexe123",
+        "password": "xexe123!!",
+        "name": "곽도팔",
+        "email": "xexe123@naver.com",
+        "address": "인천광역시 저그구 999",
+        "phoneNumber": "010-5678-1234",
+        "sellData": [
+          {
+            "date": "2024-03-21",
+            "price": 0,
+            "orderStatus": "배송중"
+          }
+        ],
+        "buyData": [
+          {
+            "date": "2024-03-17",
+            "price": 0,
+            "orderStatus": "배송완료"
+          }
+        ]
+      },
+      {
+        "memberNumber": 3,
+        "id": "cece123",
+        "password": "cece123!!",
+        "name": "김창수",
+        "email": "cece123@naver.com",
+        "address": "부산광역시 플토구 111",
+        "phoneNumber": "010-9876-5432",
+        "sellData": [
+          {
+            "date": "2024-03-19",
+            "price": 0,
+            "orderStatus": "주문완료"
+          }
+        ],
+        "buyData": [
+          {
+            "date": "2024-03-22",
+            "price": 0,
+            "orderStatus": "배송중"
+          }
+        ]
+      }
+    ]
+  }
+  
