@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import GlobalStyle from './styles/GlobalStyles';
 import Search from './pages/Search';
@@ -37,6 +38,7 @@ export default function App() {
             <Route index element={<Main/>}/>
             <Route path="main" element={<Main/>}/> {/* 메인 */}           
             <Route path="search" element={<Search/>}/> {/* 검색 */}
+            <Route path="about" element={<About/>}/> 
           </Route> 
           <Route path="/login" element={<LayoutLogin/>}>
             <Route index element={<Login currentLoginStatus={setLoginStatus}/>}/> {/* 로그인 */}
