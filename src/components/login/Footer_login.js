@@ -8,7 +8,7 @@ function Footer_login(){
             <div className={footerStyle.footerInner}>
                 <ul className={footerStyle.ul}>
                     <li className={footerStyle.li}>
-                        <Link to='./company'>
+                        <Link to='./aboutas'>
                             <span className={footerStyle.text}>About us</span>
                         </Link>
                     </li>

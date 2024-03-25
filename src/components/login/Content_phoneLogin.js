@@ -49,7 +49,7 @@ function Content_phoneLogin(){
                         <Link to="../main" className={contentStyle.text_button}>
                         <button className={contentStyle.button}>로그인</button>
                         </Link>
-                        <ul className={contentStyle.ul2}>
+                        <ul className={contentStyle.ul3}>
                             <li className={contentStyle.li}>
                                 <Link to="../findId">
                                     <span className={contentStyle.text}>아이디 찾기</span>

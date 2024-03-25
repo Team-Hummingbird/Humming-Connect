@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Content_find_pwd(){
     function btn(){
+        
         alert('인증 번호가 전송 되었습니다.');
     }
     function btn2(){

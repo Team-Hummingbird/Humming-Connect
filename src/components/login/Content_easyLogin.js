@@ -31,18 +31,18 @@ function Content_easyLogin(){
             <div className={contentStyle.loginDiv}>
                 <div className={contentStyle.loginBox}>
                     <div className={contentStyle.input}>
-                        <Link target='_blank' to='https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dgo-to-account-button&service=accountsettings&ifkv=ARZ0qKKUokM4Q8w_C_ltQaR4btzDxegO1Uov5eYp7yNSyyfWhDHCuwVi1E1GWMqqcs2mSiz8adgtlQ&theme=mn&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin'>
-                            <img className={contentStyle.easyLoginButton} src='/gogleLogin.png' alt="구글이미지" />
+                        <Link target='_blank' to='https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/'>
+                            <img className={contentStyle.easyLoginButton} src='/NaverLogin.jpg' alt="네이버이미지" />
                         </Link>
                     </div>
                     <div className={contentStyle.input}>
                         <Link target='_blank' to='https://www.facebook.com/'>
-                        <img className={contentStyle.easyLoginButton} src='/faceBookLogin.png' alt="페이스북이미지"/>
+                        <img className={contentStyle.easyLoginButton} src='/faceBookLogin.jpg' alt="페이스북이미지"/>
                         </Link>
                     </div>
                     <div className={contentStyle.input}>
-                        <Link target='_blank' to='https://www.icloud.com/'>
-                        <img className={contentStyle.easyLoginButton} src='/appleLogin.png' alt="애플이미지"/>
+                        <Link target='_blank' to='https://accounts.kakao.com/login/?continue=https%3A%2F%2Fcs.kakao.com%2F#login'>
+                        <img className={contentStyle.easyLoginButton} src='/kakaoLogin.png' alt="카카오이미지"/>
                         </Link>
                     </div>                    
                     <div className={contentStyle.text}>
