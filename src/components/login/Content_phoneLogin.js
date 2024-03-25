@@ -1,8 +1,65 @@
 import contentStyle from './Content_login.module.css'
 import { Link } from 'react-router-dom';
+import { getMemberList } from '../../apis/memberAPI';
+import { useState, useEffect } from 'react';
+
 
 function Content_phoneLogin(){
 
+    const [memberList, setMemberList]=useState([]);
+    const [phone , setPhone] = useState("")
+    const [activeNumber , setActiveNumber] = useState("")
+    const [random ,setRandom]=useState("");
+
+
+    useEffect(
+        ()=>{
+            setMemberList(getMemberList());
+            setRandom(Math.floor(Math.random()*(9999-100)+1111)+1)
+        },
+        []
+        )
+        
+        const onIdChange=(e)=>{
+            setPhone(e.target.value)
+        }
+        const onAcvChange=(e)=>{
+            setActiveNumber(e.target.va)
+        }
+        function randomsNumber(){
+            if(phone === memberList.members[0].phoneNumber || phone === memberList.members[1].phoneNumber||phone === memberList.members[2].phoneNumber ){
+                console.log(random)
+                alert(`인증 번호가 전송 되었습니다. \n${random}`)
+            }else{
+                alert('전화 번호를 입력해 주세요.')
+            }
+        }
+
+
+    const onClickHandler=()=>{
+        if(phone==="" || activeNumber===""){
+            alert('전화번호 또는 인증번호를 입력해 주세요');
+            setPhone("")
+            setActiveNumber("")
+        }else if(phone===memberList.members[0].phoneNumber && activeNumber===random){
+            alert('로그인 완료')
+            setPhone("")
+            setActiveNumber("")
+        }else if(phone===memberList.members[1].phoneNumber && activeNumber===random){
+            alert('로그인 완료')
+            setPhone("")
+            setActiveNumber("")
+        }else if(phone===memberList.members[2].phoneNumber && activeNumber===random){
+            alert('로그인 완료')
+            setPhone("")
+            setActiveNumber("")
+        }else{
+            alert('인증번호가 틀렸습니다.')
+            console.log(random)
+            setPhone("")
+            setActiveNumber("")
+        }
+    }
 
     return(
         <>
@@ -31,11 +88,11 @@ function Content_phoneLogin(){
             <div className={contentStyle.loginDiv}>
                 <div className={contentStyle.loginBox}>
                     <div className={contentStyle.input}>
-                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='+82 | 전 화 번 호' />
-                        <button className={contentStyle.phoneButton}>인증번호</button>
+                        <input onChange={onIdChange} value={phone} className={contentStyle.inputBox} type='text' id='id' placeholder='+82 | 전 화 번 호' />
+                        <button onClick={randomsNumber} value={random} className={contentStyle.phoneButton}>인증번호</button>
                     </div>
                     <div className={contentStyle.input}>
-                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='인 증 번 호'/>
+                        <input onChange={onAcvChange} value={activeNumber} className={contentStyle.inputBox} type='text' id='id' placeholder='인 증 번 호'/>
                     </div>
                     <div className={contentStyle.text}>
                         <ul className={contentStyle.loginCheackBox}>
@@ -46,8 +103,8 @@ function Content_phoneLogin(){
                     </div>
 
                     <div>
-                        <Link to="../main" className={contentStyle.text_button}>
-                        <button className={contentStyle.button}>로그인</button>
+                        <Link to="" className={contentStyle.text_button}>
+                        <button onClick={onClickHandler} className={contentStyle.button}>로그인</button>
                         </Link>
                         <ul className={contentStyle.ul3}>
                             <li className={contentStyle.li}>

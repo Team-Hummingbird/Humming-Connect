@@ -1,12 +1,57 @@
 import contentStyle from './Content_login.module.css'
-import { Link } from 'react-router-dom';
+import { getMemberList } from '../../apis/memberAPI';
+import {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
+// import { Profile } from '../../data/';
+import members from '../../data/Profile.json';
+    
 
 function Content_login(){
 
-    function btn(){
-        alert('아이디 또는 패스워드를 입력해 주세요');
+const [memberList, setMemberList]=useState([]);
+const [id , setId] = useState("")
+const [pwd , setPwd] = useState("")
+
+
+    useEffect(
+        ()=>{
+            setMemberList(getMemberList());
+        },
+        []
+        
+    )
+    const onIdChange=(e)=>{
+        setId(e.target.value)
     }
-    
+    const onPwdChange=(e)=>{
+        setPwd(e.target.value)
+    }
+
+    const onClickHandler=()=>{
+        if(id==="" || pwd===""){
+            alert('아이디 또는 패스워드를 입력해 주세요');
+            setId("")
+            setPwd("")
+        }else if(id===memberList.members[0].id && pwd===memberList.members[0].password){
+            alert('로그인 완료')
+            setId("")
+            setPwd("")
+        }else if(id===memberList.members[1].id && pwd===memberList.members[1].password){
+            alert('로그인 완료')
+            setId("")
+            setPwd("")
+        }else if(id===memberList.members[2].id && pwd===memberList.members[2].password){
+            alert('로그인 완료')
+            setId("")
+            setPwd("")
+        }else{
+            alert('아이디 또는 패스워드가 틀렸습니다.')
+            console.log(memberList.members[0])
+            setId("")
+            setPwd("")
+        }
+    }
+
     return(
         <>
         <div>
@@ -37,10 +82,10 @@ function Content_login(){
             <div className={contentStyle.loginDiv}>
                 <div className={contentStyle.loginBox}>
                     <div className={contentStyle.input}>
-                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='아 이 디' />
+                        <input onChange={onIdChange} value={id} className={contentStyle.inputBox} type='id' id='id' placeholder='아 이 디' />
                     </div>
                     <div className={contentStyle.input}>
-                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='패 스 워 드'/>
+                        <input onChange={onPwdChange} value={pwd} className={contentStyle.inputBox} type='password' id='password' placeholder='패 스 워 드'/>
                     </div>
                     <div className={contentStyle.text}>
                         <ul className={contentStyle.loginCheackBox}>
@@ -51,8 +96,8 @@ function Content_login(){
                     </div>
 
                     <div>
-                        <Link to="../main" className={contentStyle.text_button}>
-                        <button onClick={btn} className={contentStyle.button}>로그인</button>
+                        <Link to="" className={contentStyle.text_button}>
+                        <button onClick={onClickHandler} className={contentStyle.button}>로그인</button>
                         </Link>
 
                         <ul className={contentStyle.ul3}>
@@ -82,6 +127,6 @@ function Content_login(){
     </div>
         </>
     )
-}
+    }
 
 export default Content_login;
