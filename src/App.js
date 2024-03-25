@@ -29,7 +29,6 @@ export default function App() {
   // <Route path="order" element={<Order/>}/> {/* 주문 */}
   // <Route path="register" element={<Register/>}/> {/* 회원가입 */}
   // <Route path="sell" element={<Sell/>}/> {/* 판매신청 */}
-
   return (
     <>      
       <BrowserRouter>
