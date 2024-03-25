@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 
 function Content_login(){
 
+    function btn(){
+        alert('아이디 또는 패스워드를 입력해 주세요');
+    }
     
     return(
         <>
@@ -34,10 +37,10 @@ function Content_login(){
             <div className={contentStyle.loginDiv}>
                 <div className={contentStyle.loginBox}>
                     <div className={contentStyle.input}>
-                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='아이디' />
+                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='아 이 디' />
                     </div>
                     <div className={contentStyle.input}>
-                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='패스워드'/>
+                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='패 스 워 드'/>
                     </div>
                     <div className={contentStyle.text}>
                         <ul className={contentStyle.loginCheackBox}>
@@ -49,7 +52,7 @@ function Content_login(){
 
                     <div>
                         <Link to="../main" className={contentStyle.text_button}>
-                        <button className={contentStyle.button}>로그인</button>
+                        <button onClick={btn} className={contentStyle.button}>로그인</button>
                         </Link>
 
                         <ul className={contentStyle.ul3}>

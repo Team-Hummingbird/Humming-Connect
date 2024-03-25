@@ -31,7 +31,7 @@ function Content_phoneLogin(){
             <div className={contentStyle.loginDiv}>
                 <div className={contentStyle.loginBox}>
                     <div className={contentStyle.input}>
-                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='+82 | 전화번호' />
+                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='+82 | 전 화 번 호' />
                         <button className={contentStyle.phoneButton}>인증번호</button>
                     </div>
                     <div className={contentStyle.input}>
