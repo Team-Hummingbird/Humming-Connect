@@ -1,16 +1,16 @@
 import headerStyle from './Header.module.css';
 import { NavLink } from 'react-router-dom';
 
-export default function Header(props){
-  console.log('current loginStatus :' + props.currentLoginStatus); //  로그인 상태 확인  
+export default function Header(){
+  // console.log('current loginStatus :' + props.currentLoginStatus); //  로그인 상태 확인  
 
-  //로그인 상태 from App.js
-  const loginStatus = props.currentLoginStatus.isLogin; //
+  // //로그인 상태 from App.js
+  // const loginStatus = props.currentLoginStatus.isLogin; //
 
-  // logout 클릭시, login상태 false로 변경
-  const onClickHandler = () => {
-    props.currentLoginStatus.setLoginStatus(false);
-  }
+  // // logout 클릭시, login상태 false로 변경
+  // const onClickHandler = () => {
+  //   props.currentLoginStatus.setLoginStatus(false);
+  // }
   
   // 메뉴 아이콘에 마우스 hover시, 아이콘 포인트색상으로 변경
   const onMouseOverHandler = (e) => {
@@ -43,11 +43,11 @@ export default function Header(props){
           <div className={headerStyle.headerRight}>
             <ul>
               <li><NavLink to='/search'><img src={`${process.env.PUBLIC_URL}/img/searchIcon.svg`} onMouseOver={onMouseOverHandler} onMouseOut={onMouseOutHandler} alt="searchIcon"/></NavLink></li>
-              <li className={!loginStatus ? headerStyle.d_none : null}><NavLink to='/mypage'><img src={`${process.env.PUBLIC_URL}/img/mypageIcon.svg`} onMouseOver={onMouseOverHandler} onMouseOut={onMouseOutHandler} alt="mypageIcon"/></NavLink></li>
+              {/* <li className={!loginStatus ? headerStyle.d_none : null}><NavLink to='/mypage'><img src={`${process.env.PUBLIC_URL}/img/mypageIcon.svg`} onMouseOver={onMouseOverHandler} onMouseOut={onMouseOutHandler} alt="mypageIcon"/></NavLink></li>
               <li className={!loginStatus ? headerStyle.d_none : null}><NavLink to='/order'><img src={`${process.env.PUBLIC_URL}/img/orderIcon.svg`} onMouseOver={onMouseOverHandler} onMouseOut={onMouseOutHandler} alt="orderIcon"/></NavLink></li>
               <li className={!loginStatus ? headerStyle.d_none : null}><NavLink to='/sell'><img src={`${process.env.PUBLIC_URL}/img/sellIcon.svg`} onMouseOver={onMouseOverHandler} onMouseOut={onMouseOutHandler} alt="sellIcon"/></NavLink></li>
               <li className={!loginStatus ?  headerStyle.loginBtn : headerStyle.d_none}><NavLink to='/login'>LOGIN</NavLink></li>
-              <li className={!loginStatus ? headerStyle.d_none : null}><NavLink to='/main' onClick={onClickHandler}><img src={`${process.env.PUBLIC_URL}/img/logoutIcon.svg`} onMouseOver={onMouseOverHandler} onMouseOut={onMouseOutHandler} alt="logoutIcon"/></NavLink></li>
+              <li className={!loginStatus ? headerStyle.d_none : null}><NavLink to='/main' onClick={onClickHandler}><img src={`${process.env.PUBLIC_URL}/img/logoutIcon.svg`} onMouseOver={onMouseOverHandler} onMouseOut={onMouseOutHandler} alt="logoutIcon"/></NavLink></li> */}
             </ul>
           </div>
         </header>
