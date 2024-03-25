@@ -1,4 +1,3 @@
-
 export default function Main(){
   return(
     <div style={{height:'calc(100vh - 160px)', padding: 20}}>
@@ -6,4 +5,3 @@ export default function Main(){
     </div>
   );
 }
-

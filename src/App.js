@@ -1,4 +1,9 @@
 
+import Login from './pages/login/Login';
+import EasyLogin from './pages/login/EasyLogin';
+import PhoneLogin from './pages/login/PhoneLogin';
+import FindId from './pages/login/FindId';
+import FindPwd from './pages/login/FindPwd';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import GlobalStyle from './styles/GlobalStyles';
 import Search from './pages/Search';
@@ -37,6 +42,7 @@ export default function App() {
   // <Route path="register" element={<Register/>}/> {/* 회원가입 */}
   // <Route path="sell" element={<Sell/>}/> {/* 판매신청 */}
   return (
+
     <>      
       <BrowserRouter>
         <Routes>
@@ -51,6 +57,11 @@ export default function App() {
             <Route path="register" element={<Register/>}/> {/* 회원가입 */}
             <Route path="sell" element={<Sell/>}/> {/* 판매신청 */}
             <Route path="about" element={<About/>}/> 
+            <Route path="login" element={<Login/>}/>
+            <Route path="easyLogin" element={<EasyLogin/>}/>
+            <Route path="phoneLogin" element={<PhoneLogin/>}/>
+            <Route path='findId' element={<FindId/>}/>
+            <Route path='findPwd' element={<FindPwd/>}/>
           </Route> 
           <Route path="/login" element={<LayoutLogin/>}>
             <Route index element={<Login currentLoginStatus={setLoginStatus}/>}/> {/* 로그인 */}
@@ -61,4 +72,3 @@ export default function App() {
     </>    
   );
 }
-
