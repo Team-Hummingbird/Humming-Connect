@@ -66,16 +66,7 @@ function Detail() {
         </div>
 
         <div className={detailStyle.ExplanationBox2}>
-            <div className={detailStyle.SmallImg}>
-                <img
-                alt="작은 둥근 이미지"
-                src=""
-                
-                />
-            </div>
-
-
-
+        
         </div>
 
         </>
