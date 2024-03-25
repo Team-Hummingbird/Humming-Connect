@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import GlobalStyle from './styles/GlobalStyles';
 import Search from './pages/Search';
@@ -10,6 +11,11 @@ import Mypage from './pages/Mypage';
 import Order from './pages/Order';
 import Register from './pages/Register';
 import Sell from './pages/Sell';
+// import Company from './pages/Company';
+// import Mypage from './pages/Mypage';
+// import Order from './pages/Order';
+// import Register from './pages/Register';
+// import Sell from './pages/Sell';
 import LayoutLogin from './layouts/LayoutLogin';
 import { useState } from 'react';
 
@@ -25,6 +31,11 @@ export default function App() {
     setIsLogin(status);
   }
 
+  // <Route path="about" element={<Company/>}/> {/* 회사소개 */}
+  // <Route path="mypage" element={<Mypage/>}/> {/* 마이페이지 */}
+  // <Route path="order" element={<Order/>}/> {/* 주문 */}
+  // <Route path="register" element={<Register/>}/> {/* 회원가입 */}
+  // <Route path="sell" element={<Sell/>}/> {/* 판매신청 */}
   return (
     <>      
       <BrowserRouter>
@@ -39,6 +50,7 @@ export default function App() {
             <Route path="order" element={<Order/>}/> {/* 주문 */}
             <Route path="register" element={<Register/>}/> {/* 회원가입 */}
             <Route path="sell" element={<Sell/>}/> {/* 판매신청 */}
+            <Route path="about" element={<About/>}/> 
           </Route> 
           <Route path="/login" element={<LayoutLogin/>}>
             <Route index element={<Login currentLoginStatus={setLoginStatus}/>}/> {/* 로그인 */}
