@@ -1,15 +1,22 @@
 
-import { Outlet } from "react-router-dom";
 
+import { Outlet } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-function Layout(){
+export default function Layout(props){
+  // 로그인 상태 state from App.js
+  const isLogin = props.currentLoginStatus.isLogin;
 
-    return(
-        <>
-            
-            <Outlet/>
-        </>
-    )
+  // 로그인 상태 state 변경 함수 from App.js
+  const setLoginStatus = props.currentLoginStatus.setLoginStatus;
+  
+  return(
+    <>
+      <Header currentLoginStatus={{isLogin, setLoginStatus}}/>      
+      <Outlet/>
+      <Footer/>
+    </>
+  );
 }
 
-export default Layout;

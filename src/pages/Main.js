@@ -1,14 +1,7 @@
-import { NavLink } from 'react-router-dom';
-function Main(){
-
-    
-    return(
-        <>
-        <h1>임시 메인</h1>
-        <button><NavLink to="/login">로그인으로</NavLink></button>
-        </>
-        
-    )
+export default function Main(){
+  return(
+    <div style={{height:'calc(100vh - 160px)', padding: 20}}>
+      <h1>Main 화면</h1>
+    </div>
+  );
 }
-
-export default Main;
