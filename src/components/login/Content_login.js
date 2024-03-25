@@ -3,7 +3,6 @@ import { getMemberList } from '../../apis/memberAPI';
 import {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 // import { Profile } from '../../data/';
-import members from '../../data/Profile.json';
     
 
 function Content_login(){
