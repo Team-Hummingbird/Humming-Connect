@@ -14,9 +14,9 @@ return (
     <div className={styles.mbShip}>회원가입</div>
     <ol className={styles.inline}>
       <li>약관동의</li>
-      <img src="images/Vector2.png" alt="" />
+      <img src="img/Vector2.png" alt="" />
       <li>정보입력</li>
-      <img src="images/Vector3.png" alt="" />
+      <img src="img/Vector3.png" alt="" />
       <li>가입완료</li>
     </ol>
 
