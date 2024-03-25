@@ -1,0 +1,123 @@
+.div {
+    background-color: var(--color-white);
+    height: 2000px;
+    font-size: var(--font-size-base);
+    color: var(--color-black);
+    font-family: var(--font-montserrat);
+}
+/* 회원가입 메인 */
+.mbShip {
+    display: inline-block;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/*약관 동의~가입완료*/
+.inline {
+    margin: 0 auto;
+    display: inline-block;
+    width: 800px;
+    padding-bottom: 40px;
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+.inline li:nth-child(3),
+.inline li:nth-child(5) {
+    color: gray;
+}
+
+/* 회원가입 왼쪽박스*/
+.box {
+
+    box-sizing: border-box;
+    width: 400px;
+    height: 500px;
+    border: 0.5px solid;
+    border-right: none;
+    position: relative;
+    padding-right: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+}
+/*회원가입 오른쪽박스*/
+.box2 {
+    box-sizing: border-box;
+    width: 400px;
+    height: 500px;
+    border: 0.5px solid;
+    position: relative;
+    padding-right: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/* 중앙정렬*/
+.box3 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.top, .write{
+    padding-left: 20px;
+}
+
+.top {
+    padding-top: 20px;
+}
+.li, .topli{
+    list-style: decimal;
+}
+
+.li{
+    padding-left: 40px;
+    text-indent: -20px;
+}
+
+.topli{
+    padding-left: 20px;
+    padding-top: 20px;
+    text-indent: 0px;
+}
+
+.disclist{
+    list-style: disc;
+    padding-left: 40px;
+    text-indent: -20px;
+}
+.disclist2{
+    list-style: disc;
+    padding-left: 20px;
+    text-indent: -20px;
+}
+
+.checkbox{
+    margin-right: 10px;
+}
+.label{
+    margin-right: 40px;
+}
+
+.checkboxs1{
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+}
+.buttonA {
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    width: 800px;
+    height: 50px;
+    align-content: center;
+    text-align: center;
+    margin-inline: auto;
+    -webkit-text-fill-color: white;
+    
+}
