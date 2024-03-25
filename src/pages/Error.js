@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import errorStyle from './ErrorPage.module.css'
+import errorStyle from './Error.module.css'
 
 function ErrorPage() {
 
     return (
     <div className={errorStyle.a}>
-        <img className={errorStyle.images1Icon} alt="" src="images 1.png" />
+        <img className={errorStyle.images1Icon} alt="" src="errorImg.png" />
         <div className={errorStyle.groupContainer}>
             <div className={errorStyle.error}>404 ERROR</div>
             <div className={errorStyle.pageNotFound}>Page Not Found</div>
