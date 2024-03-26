@@ -17,19 +17,14 @@ export default function Search(artWorkList){
 
   useEffect(
     () => {
-      setArtsList(JSON.parse(artWorkList.artList));
-      //setArtsList(getArtworkList());
-      //console.table(artsList);      
+      setArtsList(JSON.parse(artWorkList.artList));     
     },
     [searchValue]
   );
 
   // 검색버튼 클릭시, 검색 결과 표시
   const onClickHandler = () => {  
-    
-    console.log(artsList);
     const filteredList = artsList.filter(artItem => (artItem.artist.toLowerCase()).match(searchValue.toLowerCase()) || (artItem.title.toLowerCase()).match(searchValue.toLowerCase()));
-    console.log('검색한 결과 : ' + searchValue);
 
     if(searchValue === null || searchValue === undefined || searchValue === ''){
       alert('검색어를 입력하지 않았습니다.\n검색어를 입력해주세요🔍');
@@ -38,14 +33,12 @@ export default function Search(artWorkList){
           <p>검색어를 입력해주세요. </p>
         </div>
       );
+      setSearchTitle('SEARCH RESULT'); // 검색 결과 타이틀 변경
       setSearchedItem(''); // 검색어 미입력시 결과 초기화
       setCount(`0개의 작품이 검색되었습니다.`); // 검색 작품 갯수 표시
     } else {
       setSearchTitle(`'${searchValue}' 검색 결과`); // 검색 결과 타이틀 변경
-      console.log('검색어 입력 완료');
-      console.log(filteredList.length);
       if(filteredList.length === 0){ //검색어를 입력했으나 해당 검색 결과가 없는 경우
-        console.log('검색 결과 : ' + filteredList.length);
         setNone(
           <div className={SearchStyle.nullResult}>
             <p>검색하신 '{searchValue}' 결과가 없습니다.</p>
@@ -53,7 +46,6 @@ export default function Search(artWorkList){
         );
         setSearchedItem(''); // 검색어 미입력시 결과 초기화
       }else{
-        console.log('검색 결과 : ' + filteredList.length);
         setSearchedItem(filteredList.map(art => <ArtItem key={art.artCode} art={art}/>));
         setNone(''); // 검색내용 있을 시 검색결과 없음 내용 빈칸으로 초기화   
       }
