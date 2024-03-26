@@ -11,20 +11,29 @@
     display: block;
     list-style-type: none;
     padding: 0;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     margin-left: -200px;
 
 }
 .li{
     display: inline-block;
 }
+.titleText{
+    font-weight:normal;
+    letter-spacing: -.5px;
+    font-size: 16px;
+    width: 200px;
+}
 .li2{
     display: inline-block;
     margin-left: 22%;
+    font-weight: bolder;
+    
 }
 .li3{
     display: inline-block;
     margin-left: 20%;
+    font-weight: bolder;
 }
 .tli2{
     display: inline-block;
@@ -34,6 +43,17 @@
     display: inline-block;
     margin-left: 15%;
 }
+.tli4{
+    display: inline-block;
+    margin-left: 1%;
+    font-size: 18px;
+}
+.tli5{
+    display: inline-block;
+    margin-left: 19.5%;
+    font-size: 18px;
+}
+
 .imgSize{
     height: 100px;
     width: 100px;
@@ -44,6 +64,7 @@
 .itemImgSize{
     height: 110px;
     width: 110px;
+    margin-right: 10px;
     /* border: 1px solid #c2c2; */
     /* border-radius: 50px; */
     /* background-color: #d9d9d9; */
@@ -124,8 +145,8 @@
 }
 .pointer:hover{
   cursor: pointer;
-  background-color: black;
-  border: 1px solid black;
+  background-color: gray;
+  border: 1px solid gray;
   color: white;
   border-radius: 5px;
   width: 150x;
