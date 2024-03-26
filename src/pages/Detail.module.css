@@ -109,6 +109,8 @@
 .DeliveryBox,
 .HcgBox {
     display: flex;
+    justify-content: space-between;
+    width: 414px;
 }
 
 .Delivery,
@@ -120,7 +122,6 @@
 
 .DeliveryBtn {
     margin-top: 19px;
-    margin-left: 293px;
     background-color: white;
     border: #ffffff;
     color: #28282A;
@@ -128,7 +129,6 @@
 
 .HcgBtn {
     margin-top: 19px;
-    margin-left: 145px;
     background-color: white;
     border: #ffffff;
     color: #28282A;

@@ -49,7 +49,7 @@ function Detail() {
             <p className={detailStyle.Delivery}>배송 관련 사항</p>
             <div className={detailStyle.DeliveryBtn}>
                 {<DeliveryToggle/>}
-            </div>
+            </div>    
             </div>
             <hr className={detailStyle.Hr2}/>
             <div className={detailStyle.HcgBox}>
