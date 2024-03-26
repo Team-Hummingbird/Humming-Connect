@@ -62,14 +62,6 @@ export default function Search(artWorkList){
     setSearchValue('') // 검색 후 검색 결과 초기화    
   }
 
-  //<div className={`${SearchStyle.d_none}, ${SearchStyle.pagination}`}>
-//   <span className={SearchStyle.prevBtn}></span>
-//   <ul>
-//     <li className={SearchStyle.active}><Link>1</Link></li>
-//   </ul>
-//   <span className={SearchStyle.nextBtn}></span>
-// </div>
-
   return(    
     <>      
       <div className={SearchStyle.main_cont}>
@@ -97,9 +89,6 @@ export default function Search(artWorkList){
                 {searchedItem} 
               </ul>
 
-              {/* pagination */}
-              {/*<div className={`${SearchStyle.pagination}, ${SearchStyle.d_none}`}>*/}
-              
             </div>
           </div>
         </div>
