@@ -4,7 +4,7 @@ import ArtItem from '../components/ArtItem';
 
 export default function Search(artWorkList){
 
-  const [artsList, setArtsList] = useState([]); // 작품리스트
+  const [artsList, setArtsList] = useState({}); // 작품리스트
   const [searchValue, setSearchValue] = useState(''); // 검색어
   const [searchedItem, setSearchedItem] = useState(''); // 검색된 작품
   const [count, setCount] = useState(''); // 검색된 작품 갯수
@@ -17,7 +17,11 @@ export default function Search(artWorkList){
 
   useEffect(
     () => {
-      setArtsList(JSON.parse(artWorkList.artList));     
+      if(artWorkList.artList === undefined){
+        console.log('Calling API is not completed');
+      } else {
+        setArtsList(JSON.parse(artWorkList.artList));
+      }
     },
     [searchValue]
   );

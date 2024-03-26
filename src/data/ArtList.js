@@ -1,7 +1,7 @@
 import * as request from 'superagent';
 import { useState, useEffect } from 'react';
 
-export function ArtWorkList() {
+export function ArtList() {
 
   const [artList, setArtList] = useState([]);
 
@@ -10,11 +10,7 @@ export function ArtWorkList() {
   //artworks 30 list 
   //https://api.artsy.net/api/artworks?size=30&page=5&exact=true&published=false
 
-  //Api호출 후 JSON데이터에 접근해 필요한 데이터만 추출
-  useEffect(
-    () => {
-      new Promise((resolve, reject) => {
-        //_embedded        
+  const callAPI = () => {
         request
           .get('https://api.artsy.net/api/artists?gene_id=4d90d18fdcdd5f44a5000025&size=50&page=1&exact=true')
           .set('X-Xapp-Token', token)
@@ -69,11 +65,21 @@ export function ArtWorkList() {
                 // console.log('artlist afterall :' + JSON.stringify(artList));
               })
 
-            resolve(artList);
-            return artList;
+            //resolve(artList);
+            //return artList;
             //console.log('new Artist afterall : ' + newArtList);
           })
-      })
+  }
+
+  //Api호출 후 JSON데이터에 접근해 필요한 데이터만 추출
+  useEffect(
+    () => {
+      // new Promise((resolve, reject) => {
+      //   //_embedded        
+        
+      // })
+
+      callAPI();
     }, []
 
 

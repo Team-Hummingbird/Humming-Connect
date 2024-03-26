@@ -16,13 +16,15 @@ import Order from './pages/Order';
 import Register from './pages/Register';
 import Sell from './pages/sell/Sell';
 import LayoutLogin from './layouts/LayoutLogin';
-import { useState } from 'react';
-import { ArtWorkList } from './data/ArtWorkList';
+import { useEffect, useState } from 'react';
+//import { ArtWorkList } from './data/ArtWorkList';
 import ErrorPage from './pages/Error';
+import { async } from 'q';
 
 export default function App() {
   // login 상태 초기 state 설정
   const [isLogin, setIsLogin] = useState(true); //로그인 안한 상태
+  //const [data, setData] = useState({}); //로그인 안한 상태
 
   /* 로그인 한 상태의 header로 사용하고 싶은 경우 아래 주석 해제하고 사용해주세요. */
   // const [isLogin, setIsLogin] = useState(true); //로그인 안한 상태
@@ -31,6 +33,17 @@ export default function App() {
   const setLoginStatus = (status) => {
     setIsLogin(status);
   }
+
+  // const getList = async() => {
+  //   const list = await ArtWorkList();
+  //   setData(list);
+  // }
+
+  // useEffect(
+  //   () => {
+  //     getList();
+  //   }
+  // );
 
   return (
 

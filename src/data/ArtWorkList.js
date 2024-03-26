@@ -79,7 +79,7 @@ export function ArtWorkList() {
             //console.log('new Artist afterall : ' + newArtList);
           })
       })
-    }, []
+    }, [artList]
 
   );
   //console.log("artList after call API : ");
