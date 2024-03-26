@@ -14,7 +14,7 @@ import Detail from './pages/Detail';
 import Mypage from './pages/Mypage';
 import Order from './pages/Order';
 import Register from './pages/Register';
-import Sell from './pages/Sell';
+import Sell from './pages/sell/Sell';
 import LayoutLogin from './layouts/LayoutLogin';
 import { useState } from 'react';
 
