@@ -65,7 +65,8 @@ export default function App() {
             <Route path="phoneLogin" element={<PhoneLogin/>}/>
             <Route path='findId' element={<FindId/>}/>
             <Route path='findPwd' element={<FindPwd/>}/>
-            <Route path="search" element={<Search artList={ArtWorkList()}/>}/> {/* 검색 */}
+            <Route path="search" element={<Search />}/>
+            {/*<Route path="search" element={<Search artList={ArtWorkList()}/>}/>  검색 */}
           </Route> 
           <Route path="/login" element={<LayoutLogin/>}>
             <Route index element={<Login currentLoginStatus={setLoginStatus}/>}/> {/* 로그인 */}
