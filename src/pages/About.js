@@ -1,6 +1,6 @@
 import style from "./About.module.css"
 
-function Company() {
+function About() {
     
     return (
 
@@ -121,4 +121,4 @@ function Company() {
     </div>
     );
 }
-export default Company;
+export default About;

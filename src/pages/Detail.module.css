@@ -1,3 +1,7 @@
+.All {
+    margin-bottom: 60px;
+}
+
 .On {
     display: flex;
     justify-content: center;
@@ -10,7 +14,7 @@
 }
 
 .DetailBox {
-    margin-top: 85px;
+    margin-top: 115px;
     margin-left: 50px;
 }
 
@@ -102,11 +106,32 @@
     color: #DFDFDF;
 }
 
+.DeliveryBox,
+.HcgBox {
+    display: flex;
+}
+
 .Delivery,
 .Hcg {
     margin-top: 20px;
     color: #28282A;
     font-size: 16px;
+}
+
+.DeliveryBtn {
+    margin-top: 19px;
+    margin-left: 293px;
+    background-color: white;
+    border: #ffffff;
+    color: #28282A;
+}
+
+.HcgBtn {
+    margin-top: 19px;
+    margin-left: 145px;
+    background-color: white;
+    border: #ffffff;
+    color: #28282A;
 }
 
 .Hr2,
@@ -117,15 +142,15 @@
 }
 
 .ExplanationBox {
+    display: flex;
     width: 704px;
     height: 142px;
     margin-top: 25px;
     margin-left: 80px;
-    padding-top: 25px;
+    padding-top: 15px;
     padding-bottom: 25px;
     padding-left: 20px;
     border: 1px solid #DFDFDF
-    
 }
 
 .Aw {
@@ -139,37 +164,28 @@
 .Maoc {
     font-size: 14px;
     color: #878787;
-    margin-left: 150px;
 }
 
 .Es {
     font-size: 14px;
     color: #878787;
-    margin-left: 140px;
     margin-top: 10px;
 }
 
 .Lr {
     font-size: 14px;
     color: #878787;
-    margin-left: 130px;
     margin-top: 10px;
-
 }
 
 .Gt {
     font-size: 14px;
     color: #878787;
-    margin-left: 115px;
     margin-top: 10px;
-
 }
 
-.a1,
-.a2,
-.a3,
-.a4 {
-    display: flex;
+.a2 {
+    margin-left: 150px;
 }
 
 .Material {
@@ -187,11 +203,43 @@
 
 .ExplanationBox2 {
     width: 704px;
-    height: 292px;
+    height: auto;
     margin-top: 25px;
     margin-left: 80px;
     padding-top: 20px;
     padding-bottom: 30px;
     padding-left: 20px;
+    padding-right: 20px;
     border: 1px solid #DFDFDF
+}
+
+.box1 {
+    display: flex;
+}
+
+.SmallImg {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.box2 {
+    margin-left: 10px;
+}
+
+.Mg2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #28282A;
+}
+
+.Am {
+    font-size: 14px;
+    color: #878787;
+    margin-top: 2px;
+}
+
+.Explain {
+    margin-top: 30px;
+    font-size: 16px;
 }
