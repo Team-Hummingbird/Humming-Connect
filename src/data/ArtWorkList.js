@@ -5,6 +5,8 @@ export function ArtWorkList() {
 
   const [artList, setArtList] = useState([]);
 
+  //const newArtList = []
+
   const token = 'eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IiIsInN1YmplY3RfYXBwbGljYXRpb24iOiI2ZmY5NzI0MS04N2NkLTQ5YTQtOWY0Mi1mZGRjOTU0NTkwOGIiLCJleHAiOjE3MTE1MjY5MjUsImlhdCI6MTcxMDkyMjEyNSwiYXVkIjoiNmZmOTcyNDEtODdjZC00OWE0LTlmNDItZmRkYzk1NDU5MDhiIiwiaXNzIjoiR3Jhdml0eSIsImp0aSI6IjY1ZmE5OThkNWQ1ODk0MDAwZDMwYTRlZiJ9.E3KkLTNOVOc9KUyu4kvejh2tV37gazMzl5szElEgB-I';
 
   //artworks 30 list 
@@ -22,7 +24,7 @@ export function ArtWorkList() {
           .then((res) => {
             //console.log(JSON.stringify(res.body._embedded.artists));
             // API response 데이터에서 필요한 데이터만 추출해 새로운 배열 생성
-            const newArtList = (res.body._embedded.artists).map((artist, index) => {
+           const newArtList = (res.body._embedded.artists).map((artist, index) => {
               // 가격 랜덤 생성
               const getRandomIntInclusive = (Math.floor(Math.random() * 99) + 1) * (Math.floor(Math.random()) * 100 + 100000);
 
@@ -65,17 +67,19 @@ export function ArtWorkList() {
                   return newArtList;
                 })
                 // console.log('list after artwork: ' + JSON.stringify(list));
-                setArtList(newArtList);
+                //setArtList(newArtList);
                 // console.log('artlist afterall :' + JSON.stringify(artList));
               })
 
-            resolve(artList);
-            return artList;
+            // resolve(artList);
+            // return artList;
+            setArtList(newArtList);
+            resolve(newArtList);
+            return newArtList;
             //console.log('new Artist afterall : ' + newArtList);
           })
       })
     }, []
-
 
   );
   //console.log("artList after call API : ");
