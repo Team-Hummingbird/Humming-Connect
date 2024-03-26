@@ -1,7 +1,7 @@
 import * as request from 'superagent';
 import { useState, useEffect } from 'react';
 
-export default function ArtworkList() {
+export default function ArtList() {
 
   const [artList, setArtList] = useState([]);
   // const [imgUrl, setImgUrl] = useState("");
@@ -13,22 +13,8 @@ export default function ArtworkList() {
   // const [description, setDescription] = useState("");
   const [nextId, setNextId] = useState(1);
 
-  const artistList = [
-    'geoffrey-bouillot',
-    'eva-lewis',
-    'suanjaya-kencut',
-    // { 
-    //   name : 'geoffrey-bouillot'
-    // }, 
-    // { name : 'eva-lewis'}, 
-    // { name : 'suanjaya-kencut'}, 
-    // {}
-  ];
-
   // 가격 랜덤 생성
   const getRandomIntInclusive = (Math.floor(Math.random() * (99)) + 1) * 100000; 
-    
-  console.log("random price" + getRandomIntInclusive);
 
   const changeArtList = artList.concat({
     artCode: nextId,
@@ -62,29 +48,75 @@ export default function ArtworkList() {
             .set('Accept', 'application/vnd.artsy-v2+json')
             .then((res) => {
               // console.log('art list' + JSON.stringify(res.body._embedded.artists));
-              console.log(res.body._embedded.artists);
-              (res.body._embedded.artists).map(artist => 
-                { 
-                  const changeArtList = artList.concat({                  
-                  artCode : nextId,
-                  artist : artist.name,
-                  nationality : artist.nationality,
-                  //title : res.body.title,
-                  //year : res.body.date,
-                  price : getRandomIntInclusive,
-                  //materials : res.body.medium,
-                  // description : res.body.additional_information,
-                  img : artist._links.thumbnail.href,
-                  //img size
-                })
-                
-                setArtList(changeArtList);
-                console.log(artList);
+              
+              console.log(res.body._embedded.artists[0].name);
+              console.log(res.body._embedded.artists[0].nationality);
+              console.log(res.body._embedded.artists[0]._links.thumbnail.href);
+              console.log(res.body._embedded.artists[0]._links.artworks.href);
+              
+              (res.body._embedded.artists).map(artist => console.log(
+                'artist name : ' + artist.name + '\n'
+                + 'artist nationality : ' + artist.nationality+'\n'
+                + 'img url : ' + artist._links.thumbnail.href + '\n'
+                + 'price : '
+              ))
 
-                setNextId(nextId + 1);}
-              );
-              ;
-                console.log('links :'+res.body._embedded.artists._links);
+              request
+                .get(res.body._embedded.artists[0]._links.artworks.href)
+                .set('X-Xapp-Token', token)
+                .set('Accept', 'application/vnd.artsy-v2+json')
+                .then((res) => {
+                  //console.log(res.body);
+                  console.log(res.body._embedded.artworks[0].title); //작품명
+                  console.log(res.body._embedded.artworks[0].medium); //작품소재
+                  console.log(res.body._embedded.artworks[0].date); // 작품제작연도
+                  console.log(res.body._embedded.artworks[0].dimensions.cm.text); // 작품사이즈 cm
+                  console.log(res.body._embedded.artworks[0].dimensions.in.text); // 작품사이즈 인치
+                  console.log((res.body._embedded.artworks[0]._links.image.href).replace('{image_version}', 'square'));
+                })
+              // (res.body._embedded.artists).map(index => 
+              //     console.log()
+              //   )
+                  // const changeArtList = artList.concat({                  
+                  //   artCode : nextId,
+                  //   artist : artist.name,
+                  //   nationality : artist.nationality,
+                  //   //title : res.body.title,
+                  //   //year : res.body.date,
+                  //   price : getRandomIntInclusive,
+                  //   //materials : res.body.medium,
+                  //   // description : res.body.additional_information,
+                  //   img : artist._links.thumbnail.href,
+                  //   //img size
+                  // })
+                
+                  // setNextId(nextId + 1);
+                  // setArtList(changeArtList);
+                  // console.log(artList);
+
+              // (res.body._embedded.artists).map(artist => 
+              //   { 
+              //     console.log('nextId : ' + nextId);
+              //     const changeArtList = artList.concat({                  
+              //       artCode : nextId,
+              //       artist : artist.name,
+              //       nationality : artist.nationality,
+              //       //title : res.body.title,
+              //       //year : res.body.date,
+              //       price : getRandomIntInclusive,
+              //       //materials : res.body.medium,
+              //       // description : res.body.additional_information,
+              //       img : artist._links.thumbnail.href,
+              //       //img size
+              //     })
+                
+              //     setNextId(nextId + 1);
+              //     setArtList(changeArtList);
+              //     console.log(artList);
+
+              //   }
+              // );
+              
               // request
               // .get(res.body._embedded.artists._links.artworks.href)
               // .set('X-Xapp-Token', token)
@@ -102,17 +134,6 @@ export default function ArtworkList() {
               // })
               
               console.log('artlist : ' + artList);
-              const changeArtList = artList.concat({
-                // artCode : nextId,
-                // artist : res.body.name,
-                // title : res.body.title,
-                // year : res.body.date,
-                // price : getRandomIntInclusive,
-                // materials : res.body.medium,
-                // description : res.body.additional_information,
-                // img : 'res.body._links.thumbnail.href2',
-                //img size
-              });
 
               //setNextId(nextId + 1);
               //setArtList(changeArtList);
