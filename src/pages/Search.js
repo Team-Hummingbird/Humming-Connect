@@ -1,30 +1,28 @@
 import { useEffect, useState } from 'react';
-import { getArtworkList, searchArt } from '../apis/ArtAPI';
+import { searchArt } from '../apis/ArtAPI';
 import SearchStyle from '../styles/Search.module.css'
 import { Link } from "react-router-dom";
 import ArtItem from '../components/ArtItem';
 
-export default function Search(){
+export default function Search(artWorkList){
 
   const [artsList, setArtsList] = useState([]);
   const [searchValue, setSearchValue] = useState('');
   const [searchedItem, setSearchedItem] = useState('');
-
+  
   useEffect(
     () => {
-      setArtsList(getArtworkList());
-      console.log(getArtworkList());
-      console.table(getArtworkList());      
+      // setArtsList(getArtworkList());
+      // console.log(getArtworkList());
+      // console.table(getArtworkList());      
     },
     []
   );
 
-  
-
+  // 검색버튼 클릭시, 검색 결과 표시
   const onClickHandler = () => {
     console.log('search button clicked.');
-    setSearchedItem(searchArt(searchValue).map(art => <ArtItem key={art.artCode} art={art}/>));
-    
+    setSearchedItem(searchArt(searchValue).map(art => <ArtItem key={art.artCode} art={art}/>));    
   }
 
   return(
