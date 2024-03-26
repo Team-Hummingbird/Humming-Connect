@@ -12,10 +12,10 @@ export default function Footer(){
               <div className={headerStyle.logoImg}>
                 <img src={`${process.env.PUBLIC_URL}/img/logo.svg`} alt="HummingConnect logo"/>
               </div>
-              <div className={headerStyle.logoText}>
+              <di v className={headerStyle.logoText}>
                 <p>Humming</p>
                 <p>   Connect</p>
-              </div>
+              </di>
             </NavLink>
           </div>
           <ul className={footerStyle.footer_menu}>
