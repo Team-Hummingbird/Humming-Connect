@@ -1,384 +1,284 @@
 
-
-.myInfoCheck {
-    position: absolute;
-    top: 123px;
-    left: 140px;
-    font-size: 12px;
-    font-weight: 500;
-    width: 150px;
-    height: 15px;
-}
-
-.checkbox {
-    display: inline-block; 
-    position: absolute;
-    top: 120px;
-    left: 120px;
-}
-
-.redStar,
-.red-star2,
-.red-star3,
-.red-star4,
-.red-star5,
-.red-star6,
-.red-star7,
-.red-star8,
-.red-star9,
-.red-star10 {
+.redStar {     
     color: red;
 }
 
-.sell {
-    position: absolute;
+.sell {     /* 판매 신청 */
     font-weight: 600;
-    top: 60px;
-    left: 20px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-left: 20px;
     font-size: 24px;
     width: 142px;
-    height: 28px;
 }
 
-.sellInfo {
-    position: absolute;
+.sellInfo {     /* 판매자 정보 */
     font-weight: 600;
-    top: 120px;
-    left: 20px;
-    width: 120px;
-    height: 19px;
+    padding-left: 20px;
     font-size: 16px;
 }
-
-.sellInfoText1 {
-    position: absolute;
-    font-weight: 600;
-    font-size: 16px;
-    top: 160px;
-    left: 20px;
-    width: 1160px;
-    height: 20px;
-}
-
-.sellInfoText2 {
-    position: absolute;
+.myInfoCheck {    /* 내 정보 입력 */
+    padding-top: 2px;
+    font-size: 12px;
     font-weight: 500;
-    top: 180px;
-    left: 20px;
-    width: 400px;
-    height: 20px;
+}
+.infoContainer {    /* 판매자 정보 내정보 입력 체크박스 all of them */
+    display: flex;
+    padding-bottom: 20px;
+}
+.infoCheckbox {     /* 체크박스와 라벨 사이 간격 조정 */
+    margin-left: 20px;
+}
+
+.sellInfoText1 {    /* 판매를 원하는 회원님의 정보를 입력해주세요 */
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.sellInfoText2 {    /* 입력한 정보는 판매신청 제출용으로만 활용됩니다. */
+    font-weight: 500;
+    padding-bottom: 40px;
+    padding-left: 20px;
     font-size: 14px;
     opacity: 0.7;
 }
 
-.sellInfoText3 {
-    position: absolute;
-    top: 220px;
-    left: 20px;
+
+
+.sellInfoText3 {    /* 필수입력항목 */
+    padding-bottom: 8px;
+    padding-left: 20px;
     font-size: 12px;
     font-weight: 600;
-    width: 165px;
-    height: 15px;
 }
 
-.nameBlockInner {
-    top: 240px;
-    left: 20px;
-    border: 1px solid #ccc; /* 경계선을 회색으로 설정 */
-    width: 1160px; /* 상자의 너비를 설정 */
-    height: 50px; /* 상자의 높이를 설정 */
-    border-radius: 5px; /* 모서리를 둥글게 설정 */
-    position: absolute;
-    margin-bottom: 20px;
+.myInfoCheck1 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.myInfoCheck2 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.myInfoCheck3 {
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
-.nameBlock {
-    position: absolute;
-    top: 255px;
-    left: 30px;
-    font-weight: 500;
-    font-size: 16px;
-    opacity: 0.7;
-}
 
-.phoneBlockInner {
-    top: 310px;
-    left: 20px;
-    border: 1px solid #ccc; /* 경계선을 회색으로 설정 */
-    width: 1160px; /* 상자의 너비를 설정 */
-    height: 50px; /* 상자의 높이를 설정 */
-    border-radius: 5px; /* 모서리를 둥글게 설정 */
-    position: absolute;
-    margin-bottom: 20px;
-}
-.phoneBlock {
-    position: absolute;
-    top: 325px;
-    left: 30px;
-    font-weight: 500;
-    font-size: 16px;
-    opacity: 0.7;
-}
-
-.emailBlockInner {
-    top: 380px;
-    left: 20px;
-    border: 1px solid #ccc; /* 경계선을 회색으로 설정 */
-    width: 1160px; /* 상자의 너비를 설정 */
-    height: 50px; /* 상자의 높이를 설정 */
-    border-radius: 5px; /* 모서리를 둥글게 설정 */
-    position: absolute;
-    margin-bottom: 20px;
-}
-.emailBlock {
-    position: absolute;
-    top: 395px;
-    left: 30px;
-    font-weight: 500;
-    font-size: 16px;
-    opacity: 0.7;
-}
-
-.artInfo {
-    position: absolute;
-    font-weight: 600;
-    top: 470px;
-    left: 20px;
-    width: 120px;
-    height: 20px;
-    font-size: 16px;
-}
-
-.artInfoText1 {
-    position: absolute;
+.artInfo {  /* 작품 정보 */
+    padding-bottom: 20px;
+    padding-left: 20px;
     font-weight: 600;
     font-size: 16px;
-    top: 510px;
-    left: 20px;
-    width: 1160px;
-    height: 20px;
 }
 
-.artInfoText2 {
-    position: absolute;
+.artInfoText1 {     /* 판매를 원하는 작품의 정보를 입력해주세요 */
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.artInfoText2 {     /* 입력한 정보는 전문가의 감정평가에 사용되므로 정확한 정보를 입력해주세요. */
+    padding-left: 20px;
     font-weight: 500;
-    top: 530px;
-    left: 20px;
-    width: 900px;
-    height: 20px;
     font-size: 14px;
     opacity: 0.7;
 }
 
-.artInfoText3 {
-    position: absolute;
-    top: 550px;
-    left: 20px;
+.artInfoText3 {     /* ※ 불분명한 정보를 입력한 경우, 판매신청이 보류되거나 거절될 수 있습니다. */
+    padding-bottom: 30px;
+    padding-left: 20px;
     font-size: 14px;
     font-weight: 500;
-    width: 900px;
-    height: 15px;
 }
 
-.artInfoText4 {
-    position: absolute;
-    top: 590px;
-    left: 20px;
+.artInfoText4 {     /* 필수입력항목 */
+    padding-bottom: 8px;
+    padding-left: 20px;
     font-size: 12px;
     font-weight: 600;
-    width: 165px;
-    height: 15px;
 }
 
-.artistBlockInner {
-    top: 610px;
-    left: 20px;
-    border: 1px solid #ccc; /* 경계선을 회색으로 설정 */
-    width: 1160px; /* 상자의 너비를 설정 */
-    height: 50px; /* 상자의 높이를 설정 */
-    border-radius: 5px; /* 모서리를 둥글게 설정 */
-    position: absolute;
-    margin-bottom: 20px;
+.artInfoCheck1 {
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
-.artistBlock {
-    position: absolute;
-    top: 625px;
-    left: 30px;
-    font-weight: 500;
-    font-size: 16px;
-    opacity: 0.7;
+
+
+
+.artInfoCheck2 {
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
-.titleBlockInner {
-    top: 680px;
-    left: 20px;
-    border: 1px solid #ccc; /* 경계선을 회색으로 설정 */
-    width: 1160px; /* 상자의 너비를 설정 */
-    height: 50px; /* 상자의 높이를 설정 */
-    border-radius: 5px; /* 모서리를 둥글게 설정 */
-    position: absolute;
-    margin-bottom: 20px;
-}
-.titleBlock {
-    position: absolute;
-    top: 695px;
-    left: 30px;
-    font-weight: 500;
-    font-size: 16px;
-    opacity: 0.7;
+
+.artInfoCheck3 {
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
-.yearBlockInner {
-    top: 750px;
-    left: 20px;
-    border: 1px solid #ccc; /* 경계선을 회색으로 설정 */
-    width: 1160px; /* 상자의 너비를 설정 */
-    height: 50px; /* 상자의 높이를 설정 */
-    border-radius: 5px; /* 모서리를 둥글게 설정 */
-    position: absolute;
-    margin-bottom: 20px;
-}
-.yearBlock {
-    position: absolute;
-    top: 765px;
-    left: 30px;
-    font-weight: 500;
-    font-size: 16px;
-    opacity: 0.7;
+
+.artInfoCheck4 {
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
-.materialsBlockInner {
-    top: 820px;
-    left: 20px;
-    border: 1px solid #ccc; /* 경계선을 회색으로 설정 */
-    width: 1160px; /* 상자의 너비를 설정 */
-    height: 50px; /* 상자의 높이를 설정 */
-    border-radius: 5px; /* 모서리를 둥글게 설정 */
-    position: absolute;
-    margin-bottom: 20px;
-}
-.materialsBlock {
-    position: absolute;
-    top: 835px;
-    left: 30px;
-    font-weight: 500;
-    font-size: 16px;
-    opacity: 0.7;
+
+.artInfoCheck5 {
+    padding-left: 20px;
+    padding-bottom: 40px;
 }
 
-.detailBlockInner {
-    top: 890px;
-    left: 20px;
-    border: 1px solid #ccc; /* 경계선을 회색으로 설정 */
-    width: 1160px; /* 상자의 너비를 설정 */
-    height: 190px; /* 상자의 높이를 설정 */
-    border-radius: 5px; /* 모서리를 둥글게 설정 */
-    position: absolute;
-    margin-bottom: 20px;
-}
-.detailBlock {
-    position: absolute;
-    top: 905px;
-    left: 30px;
-    font-weight: 500;
-    font-size: 16px;
-    opacity: 0.7;
-}
 
-.artImg {
-    position: absolute;
+.artImg {   /* 작품 이미지 */
     font-weight: 600;
-    top: 1125px;
-    left: 20px;
-    width: 120px;
-    height: 19px;
+    padding-bottom: 20px;
+    padding-left: 20px;
     font-size: 16px;
 }
 
-.artImgText1 {
-    position: absolute;
+.artImgText1 {  /* 판매할 작품의 이미지를 등록해주세요. */
+    padding-left: 20px;
     font-weight: 600;
     font-size: 16px;
-    top: 1165px;
-    left: 20px;
-    width: 1160px;
-    height: 20px;
 }
 
-.artImgText2 {
-    position: absolute;
+.artImgText2 {  /* 신속한 승인절차를 위해...*/
     font-weight: 500;
-    top: 1185px;
-    left: 20px;
-    width: 400px;
-    height: 20px;
+    padding-left: 20px;
+    padding-bottom: 30px;
     font-size: 14px;
     opacity: 0.7;
 }
 
-.addImgBlockInner {
-    top: 1230px;
-    left: 20px;
-    border: 1px solid #ccc; /* 경계선을 회색으로 설정 */
-    width: 1160px; /* 상자의 너비를 설정 */
-    height: 150px; /* 상자의 높이를 설정 */
-    border-radius: 5px; /* 모서리를 둥글게 설정 */
-    position: absolute;
-    margin-bottom: 20px;
+.addImg {
+    
+    padding-bottom: 60px;
+    padding-left: 20px;
 }
-.addImgBlock {
-    position: absolute;
-    top: 1245px;
-    left: 30px;
+
+.addImgBlockInner {     /* 이미지 등록 빈칸 */
+    align-items: center;
+    border: 1px solid #ccc;
+    width: 1160px;
+    height: 150px;
+    border-radius: 5px; 
+}
+.addImgBlock {   /* 이미지 등록 ADD Image */
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-bottom: 60px;
     font-weight: 500;
     font-size: 16px;
     opacity: 0.7;
 }
-
-.ImgRegister {
-    top: 1230px;
-    left: 20px;
-    border: 1px solid #ccc; /* 경계선을 회색으로 설정 */
-    width: 1160px; /* 상자의 너비를 설정 */
-    height: 150px; /* 상자의 높이를 설정 */
-    border-radius: 5px; /* 모서리를 둥글게 설정 */
-    position: absolute;
-    margin-bottom: 20px;
+.redStar1{     /* ※ 파일형식은 JPG, JPEG, PNG를 지원하며 파일크기는 최대 30MB까지 업로드 가능합니다. */
+    color: red;
+    font-weight: 600;
 }
+
 
 .imageUploadButton {
-    position: absolute;
-    top: 70px;
-    left: 20px;
-    width: 1120px; /* 버튼의 너비 */
-    height: 50px; /* 버튼의 높이 */
-    font-size: 16px; /* 텍스트 크기 */
-    border-radius: 10px; /* 버튼 모서리 둥글게 */
-    border: 1px solid #ccc; /* 버튼 테두리 설정 */
-    background-color: #f8f8f8; /* 버튼 배경색 */
-    color: #333; /* 버튼 텍스트 색상 */
-    cursor: pointer; /* 마우스 오버 시 커서 변경 */
-    transition: background-color 0.3s ease; /* 호버 효과를 위한 배경색 변경 애니메이션 */
+    display: inline-block;
+    width: 1120px; 
+    height: 50px; 
+    background-color: #f0f0f0; 
+    color: #000;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 10px;
 }
 .imageUploadButton:hover {
-    background-color: #e7e7e7; /* 버튼 호버 시 배경색 변경 */
+    background-color: #e7e7e7;
 }
 
 .imgRegister {
-    position: absolute;
-    top: 1450px;
-    left: 20px;
-    width: 1160px; /* 버튼의 너비 */
-    height: 50px; /* 버튼의 높이 */
-    font-size: 16px; /* 텍스트 크기 */
-    border-radius: 10px; /* 버튼 모서리 둥글게 */
-    border: 1px solid #ffffff; /* 버튼 테두리 설정 */
-    background-color: #D9D9D9; /* 버튼 배경색 */
-    color: #FFFFFF; /* 버튼 텍스트 색상 */
-    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    margin-left: 20px;
+    width: 1160px; 
+    height: 50px; 
+    font-size: 16px; 
+    border-radius: 10px; 
+    border: 1px solid #ffffff; 
+    background-color: #D9D9D9; 
+    color: #FFFFFF; 
+    cursor: pointer; 
+    margin-bottom: 60px;
+    font-size: 16;
+}
+
+.imgRegister {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ccc; 
+    color: white;
+    cursor: not-allowed; 
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .imgRegisterActive {
+    background-color: #000; 
+    cursor: pointer; 
+  }
+  
+
+
+
+.inputField {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 1160px; 
+    height: 50px;
+    font-size: 16;
+}
+.inputFieldDetail {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 1160px; 
+    height: 200px;
+    font-size: 16;
+    resize: none;
+}
+
+.imageUploadContainer {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.imagePreviewContainer {
+    width: 1160px; 
+    height: 300px; 
+    display: flex; 
+    justify-content: center; 
+    margin: 10px auto; 
+    border: 1px solid #ccc; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    overflow: hidden; 
+    margin-left: 0px;
+}
+
+.imagePreview {
+    max-height: 100%; 
+    max-width: 100%; 
+    object-fit: contain;
 }
 
 
-
-
+.sellDoneText {
+    font-size: 24px;
+}
