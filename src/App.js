@@ -17,6 +17,7 @@ import Register from './pages/Register';
 import Sell from './pages/sell/Sell';
 import LayoutLogin from './layouts/LayoutLogin';
 import { useState } from 'react';
+import { ArtWorkList } from './data/ArtWorkList';
 
 export default function App() {
   // login 상태 초기 state 설정
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/" element={<Layout currentLoginStatus={{isLogin, setLoginStatus}}/>}>
             <Route index element={<Main/>}/>
             <Route path="main" element={<Main/>}/> {/* 메인 */}           
+<<<<<<< HEAD
             <Route path="search" element={<Search/>}/> {/* 검색 */}
             <Route path="detail" element={<Detail/>}/> {/* 상세페이지 */}
             {/* <Route path="mypage" element={<Mypage/>}/>  마이페이지 */}
@@ -50,6 +52,9 @@ export default function App() {
             <Route path="phoneLogin" element={<PhoneLogin/>}/>
             <Route path='findId' element={<FindId/>}/>
             <Route path='findPwd' element={<FindPwd/>}/>
+=======
+            <Route path="search" element={<Search artList={ArtWorkList()}/>}/> {/* 검색 */}
+>>>>>>> 10a47892578a49c3266977ccf4b84125edff7fa8
           </Route> 
           <Route path="/login" element={<LayoutLogin/>}>
             <Route index element={<Login currentLoginStatus={setLoginStatus}/>}/> {/* 로그인 */}
