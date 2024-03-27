@@ -2,6 +2,7 @@ import contentStyle from './Content_login.module.css'
 import { Link } from 'react-router-dom';
 import { getMemberList } from '../../apis/memberAPI';
 import { useState, useEffect } from 'react';
+import {isLogin, setIsLogin} from '../../components/login/Content_login'
 
 
 function Content_phoneLogin(){
@@ -10,7 +11,7 @@ function Content_phoneLogin(){
     const [phone , setPhone] = useState("")
     const [activeNumber , setActiveNumber] = useState()
     const [random ,setRandom]=useState();
-
+    const [isLogin, setIsLogin]=useState(false)
 
     useEffect(
         ()=>{
@@ -39,24 +40,29 @@ function Content_phoneLogin(){
     const onClickHandler=()=>{
         if(phone==="" || activeNumber===0){
             alert('전화번호 또는 인증번호를 입력해 주세요');
+            setIsLogin(false)
             setPhone("")
             setActiveNumber("")
-        }else if(phone===memberList.members[0].phoneNumber && activeNumber==random){
+        }else if(phone===memberList.members[0].phoneNumber && activeNumber===random){
             alert('로그인 완료')
+            setIsLogin(true)
             setPhone("")
             setActiveNumber("")
-        }else if(phone===memberList.members[1].phoneNumber && activeNumber==random){
+        }else if(phone===memberList.members[1].phoneNumber && activeNumber===random){
             alert('로그인 완료')
+            setIsLogin(true)
             setPhone("")
             setActiveNumber("")
-        }else if(phone===memberList.members[2].phoneNumber && activeNumber==random){
+        }else if(phone===memberList.members[2].phoneNumber && activeNumber===random){
             alert('로그인 완료')
+            setIsLogin(true)
             setPhone("")
             setActiveNumber("")
         }else{
             alert('인증번호가 틀렸습니다.')
-            console.log(random)
-            console.log(activeNumber)
+            // console.log(random)
+            // console.log(activeNumber)
+            setIsLogin(false)
             setPhone("")
             setActiveNumber("")
         }
@@ -106,6 +112,7 @@ function Content_phoneLogin(){
                     <div>
                         <Link to="" className={contentStyle.text_button}>
                         <button onClick={onClickHandler} className={contentStyle.button}>로그인</button>
+                        {isLogin}
                         </Link>
                         <ul className={contentStyle.ul3}>
                             <li className={contentStyle.li}>

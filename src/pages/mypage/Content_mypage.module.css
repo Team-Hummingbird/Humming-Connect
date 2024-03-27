@@ -1,0 +1,184 @@
+.ul {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    padding-left: 80px;
+    padding-bottom: 30px;
+
+    /* padding-bottom: 20px; */
+}
+.ul2 {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    padding-bottom: 20px;
+    margin-left: -200px;
+
+}
+.li{
+    display: inline-block;
+}
+.titleText{
+    font-weight:normal;
+    letter-spacing: -.5px;
+    font-size: 16px;
+    width: 200px;
+}
+.li2{
+    display: inline-block;
+    margin-left: 22%;
+    font-weight: bolder;
+    
+}
+.li3{
+    display: inline-block;
+    margin-left: 20%;
+    font-weight: bolder;
+}
+.tli2{
+    display: inline-block;
+    margin-left: 20%;
+}
+.tli3{
+    display: inline-block;
+    margin-left: 15%;
+}
+.tli4{
+    display: inline-block;
+    margin-left: 1%;
+    font-size: 18px;
+}
+.tli5{
+    display: inline-block;
+    margin-left: 19.5%;
+    font-size: 18px;
+}
+
+.imgSize{
+    height: 100px;
+    width: 100px;
+    /* border: 1px solid #c2c2; */
+    border-radius: 50px;
+    /* background-color: #d9d9d9; */
+}
+.itemImgSize{
+    height: 110px;
+    width: 110px;
+    margin-right: 10px;
+    /* border: 1px solid #c2c2; */
+    /* border-radius: 50px; */
+    /* background-color: #d9d9d9; */
+}
+.mainText{
+    padding-left: 60px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+.text{
+    padding-left: 40px;
+    font-size: 20px;
+}
+.text2{
+    padding-left: 40px;
+}
+
+.text_button{
+    margin: 10px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffff;
+    text-align: center;
+    
+}
+.mainDiv{
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 1600px;
+}
+.tableDiv{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 1400px;
+    margin-top: -210px;
+    padding-bottom: 210px;
+    margin-right: 400px;
+    padding-left: 150px;
+}
+
+.line{
+    width: 95%;
+    max-width: 1600px;
+    margin: 0 auto;
+    
+}
+.line2{
+    display: block;
+    width: 82%;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-right: 0;
+
+}
+
+.pointer{
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-top: 40px;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 16px;
+}
+.pointer:hover{
+  cursor: pointer;
+  background-color: gray;
+  border: 1px solid gray;
+  color: white;
+  border-radius: 5px;
+  width: 150x;
+  height: 40px;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 16px;
+}
+.onPoint{
+    cursor: pointer;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 16px;
+  }
+
+  .inputBox{
+    display: block;
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 3px solid #C2C2C2;
+    height: 50px;
+    width : 100%;
+    margin: 0 auto;
+}
+.inputDiv .mainDiv{
+    margin-bottom: 20px;
+}
