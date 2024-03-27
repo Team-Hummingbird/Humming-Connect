@@ -117,16 +117,21 @@
 }
 
 .DeliveryBtn {
-    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    width: 414px;
     padding: 0 20px;
     font-size: 16px;
     font-weight: bold;
 }
 
 .HcgBtn {
-    background-color: white;
-    border: #ffffff;
-    color: #28282A;
+    display: flex;
+    justify-content: space-between;
+    width: 414px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .Hr2,
@@ -143,7 +148,7 @@
     margin-top: 25px;
     margin-left: 80px;
     padding-top: 15px;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     padding-left: 20px;
     border: 1px solid #DFDFDF
 }
@@ -194,6 +199,7 @@
     font-size: 14px;
     color: #28282A;
     margin-top: 10px;
+    
 }
 
 .ExplanationBox2 {
@@ -243,9 +249,32 @@
     font-size: 16px;
     color: #878787;
     text-align: justify;
+    padding: 0 20px;
+    margin-top: 10px;
 }
 
 .HcgText {
+    display: flex;
     font-size: 16px;
     color: #878787;
+    text-align: justify;
+    padding: 0 20px;
+    margin-top: 10px;
+}
+
+.btn,
+.btn1 {
+    margin-top: 20px;
+}
+
+.b1,
+.b2,
+.b3 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #878787;
+}
+
+.d_none {
+    display: none;
 }

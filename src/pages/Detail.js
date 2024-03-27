@@ -46,7 +46,7 @@ function Detail() {
             <div className={detailStyle.DeliveryBox}>
             <div className={detailStyle.DeliveryBtn}>
             <p className={detailStyle.Delivery}>배송 관련 사항</p>
-            <span>⌵</span>
+            <span className={detailStyle.btn}>⌵</span>
             </div>
             <div className={detailStyle.DeliveryText}>
                     국내 배송<br/>
@@ -59,21 +59,21 @@ function Detail() {
             <div className={detailStyle.HcgBox}>
             <div className={detailStyle.HcgBtn}>
             <p className={detailStyle.Hcg}>Humming Connect Guarantee</p>
-            <span>⌵</span>
+            <span className={detailStyle.btn1}>⌵</span>
             </div>
             <div className={detailStyle.HcgText}>
             <img 
                     alt="자물쇠 모양"
                     src="img/image 52.png"/>
-                    <p>안심 결제</p> 
+                    <p className={detailStyle.b1}>안심 결제</p> 
                     <img
                     alt="돈 모양"
                     src="img/image 53.png"/>
-                    <p>환불 보장</p>
+                    <p className={detailStyle.b2}>환불 보장</p>
                     <img
                     alt="체크 모양"
                     src="img/image 54.png"/>
-                    <p>진품 보장</p>
+                    <p className={detailStyle.b3}>진품 보장</p>
             </div>
             </div>
             <hr className={detailStyle.Hr3}/>
