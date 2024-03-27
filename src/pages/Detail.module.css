@@ -106,29 +106,17 @@
     color: #DFDFDF;
 }
 
-.DeliveryBox,
-.HcgBox {
-    display: flex;
-    justify-content: space-between;
-    width: 414px;
-}
-
 .Delivery,
 .Hcg {
     margin-top: 20px;
     color: #28282A;
     font-size: 16px;
-}
-
-.DeliveryBtn {
-    margin-top: 19px;
-    background-color: white;
-    border: #ffffff;
-    color: #28282A;
+    display: flex;
+    justify-content: space-between;
+    width: 414px;
 }
 
 .HcgBtn {
-    margin-top: 19px;
     background-color: white;
     border: #ffffff;
     color: #28282A;
