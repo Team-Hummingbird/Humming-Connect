@@ -8,7 +8,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import GlobalStyle from './styles/GlobalStyles';
 import Search from './pages/Search';
 import Layout from './layouts/Layout';
-// import LayoutLogin from './layouts/LayoutLogin';
 import Main from './pages/Main';
 import About from './pages/About';
 import Detail from './pages/Detail';
@@ -19,14 +18,7 @@ import Order from './pages/Order';
 import Register from './pages/Register';
 import { ArtWorkList } from './data/ArtWorkList';
 import Sell from './pages/sell/Sell';
-// import Company from './pages/Company';
-// import Mypage from './pages/Mypage';
-// import Order from './pages/Order';
-// import Register from './pages/Register';
-// import Sell from './pages/Sell';
-// import { useState } from 'react';
-import LayoutLogin from './layouts/LayoutLogin';
-import { useState } from 'react';
+import Error from './pages/Error';
 
 export default function App() {
   // // login 상태 초기 state 설정
@@ -67,8 +59,8 @@ export default function App() {
             <Route path="order" element={<Order/>}/> {/* 주문 */}
             <Route path="register" element={<Register/>}/> {/* 회원가입 */}
             <Route path="sell" element={<Sell/>}/> {/* 판매신청 */}
-            <Route path="about" element={<About/>}/> 
-          </Route> 
+          </Route>
+          <Route patt="*" element={<Error/>}/> {/* 에러페이지 */}
           
           {/* <Route path="/login" element={<LayoutLogin/>}> */}
             {/* <Route index element={<Login currentLoginStatus={setLoginStatus}/>}/> 로그인 */}
