@@ -2,6 +2,7 @@ import contentStyle from './Content_login.module.css'
 import { getMemberList } from '../../apis/memberAPI';
 import {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import popStyle from '../../components/PopUp.module.css';
 
 // import { Profile } from '../../data/';
     
@@ -11,7 +12,34 @@ function Content_login(){
 const [memberList, setMemberList]=useState([]);
 const [id , setId] = useState("")
 const [pwd , setPwd] = useState("")
-const [isLogin, setIsLogin]=useState(false)
+const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+const [text, setText]=useState("");
+const [text2, setText2]=useState("");
+const openPopUp = () => {
+    setIsPopUpOpen(true)
+}
+
+function PopUp(){
+
+  //확인 버튼 클릭시, 팝업창 비활성화
+    const onClickHandler = (e) => {
+    e.target.parentNode.style.display = 'none';
+    e.target.parentNode.previousSibling.style.display = 'none';
+    setIsPopUpOpen(false)
+    }
+    
+
+    return(
+    <>
+        <div className={popStyle.popBg}></div>
+        <div className={popStyle.popUp_cont}>
+            <p className={popStyle.popText}>{text}</p>
+            <p className={popStyle.popText}>{text2}</p>
+            <button className={popStyle.popBtn} onClick={onClickHandler}>확인</button>
+        </div>
+    </>
+    );
+}
 
 
     useEffect(
@@ -31,29 +59,32 @@ const [isLogin, setIsLogin]=useState(false)
 
     const onClickHandler=()=>{
         if(id==="" || pwd===""){
-            alert('아이디 또는 패스워드를 입력해 주세요');
+            openPopUp(true)
             // <Link to="/main/"></Link>
+            openPopUp(true)
+            setText("")
+            setText2("아이디 , 비밀번호를 입력해주세요.")
             setId("")
             setPwd("")
         }else if(id===memberList.members[0].id && pwd===memberList.members[0].password){
-            alert('로그인 완료')
             // <NavLink to=""></NavLink>
             setId("")
             setPwd("")
         }else if(id===memberList.members[1].id && pwd===memberList.members[1].password){
-            alert('로그인 완료')
             // <NavLink to=""></NavLink>
+            
             setId("")
             setPwd("")
         }else if(id===memberList.members[2].id && pwd===memberList.members[2].password){
-            alert('로그인 완료')
             // <NavLink to=""></NavLink>
             setId("")
             setPwd("")
         }else{
-            alert('아이디 또는 패스워드가 틀렸습니다.')
+            setText("아이디 혹은 비밀번호가 틀렸습니다.")
+            setText2("확인후 다시 입력해주세요.")
             console.log(memberList.members[0])
             // <NavLink></NavLink>
+            openPopUp(true)
             setId("")
             setPwd("")
         }
@@ -133,6 +164,7 @@ const [isLogin, setIsLogin]=useState(false)
         </div>
 
     </div>
+    {isPopUpOpen && PopUp()}
         </>
     )
     }
