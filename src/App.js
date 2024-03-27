@@ -32,11 +32,6 @@ export default function App() {
   //   setIsLogin(status);
   // }
 
-  // <Route path="about" element={<Company/>}/> {/* 회사소개 */}
-  // <Route path="mypage" element={<Mypage/>}/> {/* 마이페이지 */}
-  // <Route path="order" element={<Order/>}/> {/* 주문 */}
-  // <Route path="register" element={<Register/>}/> {/* 회원가입 */}
-  // <Route path="sell" element={<Sell/>}/> {/* 판매신청 */}
   return (
 
     <>      
