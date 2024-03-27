@@ -6,7 +6,7 @@ import Main from './pages/Main';
 import Login from './pages/Login';
 import Company from './pages/Company';
 import Mypage from './pages/Mypage';
-import Order from './pages/Order';
+import Order from './pages/order/Order';
 import Register from './pages/Register';
 import Sell from './pages/sell/Sell';
 import SellDone from './pages/sell/SellDone';
