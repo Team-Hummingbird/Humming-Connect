@@ -245,34 +245,11 @@
     font-size: 16px;
 }
 
-.DeliveryText {
-    font-size: 16px;
-    color: #878787;
-    text-align: justify;
-    padding: 0 20px;
-    margin-top: 10px;
-}
-
-.HcgText {
-    display: flex;
-    font-size: 16px;
-    color: #878787;
-    text-align: justify;
-    padding: 0 20px;
-    margin-top: 10px;
-}
-
 .btn,
 .btn1 {
     margin-top: 20px;
-}
-
-.b1,
-.b2,
-.b3 {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #878787;
+    background-color: #ffffff;
+    border: none;
 }
 
 .d_none {

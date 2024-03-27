@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
 import detailStyle from "./Detail.module.css"
+import { useState } from "react";
+import HummingConnect from "../components/HummingConnect";
+import Delivery from "../components/Delivery";
+import Hcg from "../components/Hcg";
+
 
 function Detail() {
+
+    let [isClicked, setIsClicked] = useState(false);
+    let [isDelivery, setIsDelivery] = useState(false);
+    let [isHcg, setIsHcg] = useState(false);
 
     return (
         
@@ -38,42 +47,23 @@ function Detail() {
             <Link to="/buy">
             <button className={detailStyle.BuyButton}>구매하기</button>
             </Link>
-            <Link to="/HummingConnect">
-            <button className={detailStyle.HummingButton}>허밍 연결하기</button>
-            </Link>
+            <button className={detailStyle.HummingButton} onClick={ () => {setIsClicked(!isClicked)} }>허밍 연결하기</button>
+            {isClicked === true ? <HummingConnect/> : null}
             </div>
             <hr className={detailStyle.Hr1}/>
             <div className={detailStyle.DeliveryBox}>
             <div className={detailStyle.DeliveryBtn}>
             <p className={detailStyle.Delivery}>배송 관련 사항</p>
-            <span className={detailStyle.btn}>⌵</span>
-            </div>
-            <div className={detailStyle.DeliveryText}>
-                    국내 배송<br/>
-                    제휴배송업체를 통해 배송되며 도서/산간지방의 경우 추가배송비가 부가될 수 있습니다.<br/> 
-                    해외배송* 및  더 자세한 문의사항은<br/>
-                    고객센터(02-1234-5678)로 문의바랍니다.
+            <button className={detailStyle.btn} onClick={ () => {setIsDelivery(!isDelivery)} }>⌵</button>
+            {isDelivery === true ? <Delivery/> : null}
             </div>
             </div>
             <hr className={detailStyle.Hr2}/>
             <div className={detailStyle.HcgBox}>
             <div className={detailStyle.HcgBtn}>
             <p className={detailStyle.Hcg}>Humming Connect Guarantee</p>
-            <span className={detailStyle.btn1}>⌵</span>
-            </div>
-            <div className={detailStyle.HcgText}>
-            <img 
-                    alt="자물쇠 모양"
-                    src="img/image 52.png"/>
-                    <p className={detailStyle.b1}>안심 결제</p> 
-                    <img
-                    alt="돈 모양"
-                    src="img/image 53.png"/>
-                    <p className={detailStyle.b2}>환불 보장</p>
-                    <img
-                    alt="체크 모양"
-                    src="img/image 54.png"/>
-                    <p className={detailStyle.b3}>진품 보장</p>
+            <button className={detailStyle.btn1} onClick={ () => {setIsHcg(!isHcg)} }>⌵</button>
+            {isHcg === true ? <Hcg/> : null}
             </div>
             </div>
             <hr className={detailStyle.Hr3}/>

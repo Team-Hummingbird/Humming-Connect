@@ -1,10 +1,12 @@
-import { useState } from "react";
-
-const HummingConnect = (props) => {
-    let {param} = props
-
-    const onPopup = () => {
-        const url = 'preview'
-        window.open(src="img/")
-    }
+function HummingConnect() {
+    return (
+        <div>
+            <img 
+            alt="채팅창"
+            src="img/Group 144.png"
+            />
+        </div>
+    );
 }
+
+export default HummingConnect;
