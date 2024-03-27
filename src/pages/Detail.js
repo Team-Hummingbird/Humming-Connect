@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import detailStyle from "./Detail.module.css"
-import DeliveryToggle from "../components/DeliveryToggle"
-import HcgToggle from "../components/HcgToggle"
 
 function Detail() {
 
@@ -46,17 +44,36 @@ function Detail() {
             </div>
             <hr className={detailStyle.Hr1}/>
             <div className={detailStyle.DeliveryBox}>
-            <div className={detailStyle.Delivery}>배송 관련 사항
             <div className={detailStyle.DeliveryBtn}>
-                {<DeliveryToggle/>}
-            </div>  
+            <p className={detailStyle.Delivery}>배송 관련 사항</p>
+            <span>⌵</span>
+            </div>
+            <div className={detailStyle.DeliveryText}>
+                    국내 배송<br/>
+                    제휴배송업체를 통해 배송되며 도서/산간지방의 경우 추가배송비가 부가될 수 있습니다.<br/> 
+                    해외배송* 및  더 자세한 문의사항은<br/>
+                    고객센터(02-1234-5678)로 문의바랍니다.
             </div>
             </div>
             <hr className={detailStyle.Hr2}/>
             <div className={detailStyle.HcgBox}>
-            <p className={detailStyle.Hcg}>Humming Connect Guarantee</p>
             <div className={detailStyle.HcgBtn}>
-                {<HcgToggle/>}
+            <p className={detailStyle.Hcg}>Humming Connect Guarantee</p>
+            <span>⌵</span>
+            </div>
+            <div className={detailStyle.HcgText}>
+            <img 
+                    alt="자물쇠 모양"
+                    src="img/image 52.png"/>
+                    <p>안심 결제</p> 
+                    <img
+                    alt="돈 모양"
+                    src="img/image 53.png"/>
+                    <p>환불 보장</p>
+                    <img
+                    alt="체크 모양"
+                    src="img/image 54.png"/>
+                    <p>진품 보장</p>
             </div>
             </div>
             <hr className={detailStyle.Hr3}/>
