@@ -23,6 +23,7 @@ import Sell from './pages/sell/Sell';
 // import Sell from './pages/Sell';
 import LayoutLogin from './layouts/LayoutLogin';
 import { useState } from 'react';
+import { ArtWorkList } from './data/ArtWorkList';
 
 export default function App() {
   // login 상태 초기 state 설정
@@ -49,7 +50,7 @@ export default function App() {
           <Route path="/" element={<Layout currentLoginStatus={{isLogin, setLoginStatus}}/>}>
             <Route index element={<Main/>}/>
             <Route path="main" element={<Main/>}/> {/* 메인 */}           
-            <Route path="search" element={<Search/>}/> {/* 검색 */}
+            <Route path="search" element={<Search artList={ArtWorkList()}/>}/> {/* 검색 */}
             <Route path="about" element={<Company/>}/> {/* 회사소개 */}
             <Route path="detail" element={<Detail/>}/> {/* 상세페이지 */}
             <Route path="mypage" element={<Mypage/>}/> {/* 마이페이지 */}

@@ -9,8 +9,8 @@ export default function ArtItem({art}){
         {/*src={`${process.env.PUBLIC_URL}/img/searchIcon.svg`}*/}
         <div className={SearchStyle.descriptText}>
           <p>{art.artist}</p>
-          <p>`{art.title}, {art.year}`</p>          
-          <p>`￦{art.price}`</p>          
+          <p>{art.title}, {art.year}</p>          
+          <p>￦{art.price}</p>          
         </div>
       </Link>
     </li> 
