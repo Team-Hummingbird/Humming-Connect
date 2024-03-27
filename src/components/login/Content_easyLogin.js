@@ -15,7 +15,7 @@ function Content_easyLogin(){
                         </Link>
                     </li>
                     <li className={contentStyle.li}>
-                        <Link to="" className={contentStyle.on} role='tab'>
+                        <Link to="../eastlogin" className={contentStyle.on} role='tab'>
                             <span>간편 로그인</span>
                         </Link>
                         </li>
