@@ -1,5 +1,5 @@
 /* Search 검색페이지 */
-.main_cont {min-height: calc(100vh - 160px); max-width:1200px;}
+.main_cont {min-height: calc(100vh - 160px); max-width:1600px;}
 .search_cont {display: flex; flex-direction: column; align-items: center; padding:60px 20px; background-color: #ffffff; }
 
 /* searchBar */
