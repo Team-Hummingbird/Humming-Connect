@@ -65,7 +65,7 @@ const [isLogin, setIsLogin]=useState(false)
             <div className={contentStyle.contentInner}> 
                 <ul className={contentStyle.ul}>
                     <li className={contentStyle.li}>
-                        <Link to="" className={contentStyle.on} role='tab'>
+                        <Link to="../login" className={contentStyle.on} role='tab'>
                             <span>ID 로그인</span>
                         </Link>
                     </li>

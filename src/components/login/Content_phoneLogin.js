@@ -38,31 +38,31 @@ function Content_phoneLogin(){
 
 
     const onClickHandler=()=>{
-        if(phone==="" || activeNumber===0){
+        if(phone==="" || activeNumber===""){
             alert('전화번호 또는 인증번호를 입력해 주세요');
-            setIsLogin(false)
+           
             setPhone("")
             setActiveNumber("")
-        }else if(phone===memberList.members[0].phoneNumber && activeNumber===random){
+        }else if(phone===memberList.members[0].phoneNumber && activeNumber==random){
             alert('로그인 완료')
-            setIsLogin(true)
+            
             setPhone("")
             setActiveNumber("")
-        }else if(phone===memberList.members[1].phoneNumber && activeNumber===random){
+        }else if(phone===memberList.members[1].phoneNumber && activeNumber==random){
             alert('로그인 완료')
-            setIsLogin(true)
+            
             setPhone("")
             setActiveNumber("")
-        }else if(phone===memberList.members[2].phoneNumber && activeNumber===random){
+        }else if(phone===memberList.members[2].phoneNumber && activeNumber==random){
             alert('로그인 완료')
-            setIsLogin(true)
+           
             setPhone("")
             setActiveNumber("")
         }else{
             alert('인증번호가 틀렸습니다.')
-            // console.log(random)
-            // console.log(activeNumber)
-            setIsLogin(false)
+            console.log(random)
+            console.log(activeNumber)
+         
             setPhone("")
             setActiveNumber("")
         }
@@ -84,7 +84,7 @@ function Content_phoneLogin(){
                         </Link>
                         </li>
                     <li className={contentStyle.li}>
-                        <Link to="" className={contentStyle.on} role='tab'>
+                        <Link to="..phoneLogin" className={contentStyle.on} role='tab'>
                             <span>전화번호 로그인</span>
                         </Link>
                         </li>
