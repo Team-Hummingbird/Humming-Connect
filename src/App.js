@@ -17,14 +17,16 @@ import Mypage2 from './pages/mypage/MypageTable2';
 import Mypage3 from './pages/mypage/MypageTable3';
 import Order from './pages/Order';
 import Register from './pages/Register';
-import Sell from './pages/Sell';
 import { ArtWorkList } from './data/ArtWorkList';
+import Sell from './pages/sell/Sell';
 // import Company from './pages/Company';
 // import Mypage from './pages/Mypage';
 // import Order from './pages/Order';
 // import Register from './pages/Register';
 // import Sell from './pages/Sell';
 // import { useState } from 'react';
+import LayoutLogin from './layouts/LayoutLogin';
+import { useState } from 'react';
 
 export default function App() {
   // // login 상태 초기 state 설정
@@ -56,8 +58,8 @@ export default function App() {
           <Route path="/" element={<Layout/>}>
             <Route index element={<Main/>}/>s
             <Route path="main" element={<Main/>}/> {/* 메인 */}           
-            <Route path="search" element={<Search/>}/> {/* 검색 */}
             <Route path="about" element={<About/>}/> {/* 회사소개 */}
+            <Route path="search" element={<Search artList={ArtWorkList()}/>}/> {/* 검색 */}
             <Route path="detail" element={<Detail/>}/> {/* 상세페이지 */}
             <Route path="mypage" element={<Mypage props={ArtWorkList()}/>}/> {/* 마이페이지 */}
             <Route path="mypage2" element={<Mypage2 props={ArtWorkList()}/>}/> {/* 마이페이지2 */}

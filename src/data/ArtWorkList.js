@@ -25,8 +25,7 @@ export function ArtWorkList() {
             const newArtList = (res.body._embedded.artists).map((artist, index) => {
               // 가격 랜덤 생성
               const getRandomIntInclusive = (Math.floor(Math.random() * 99) + 1) * (Math.floor(Math.random()) * 100 + 100000);
-             
-              
+
               return {
                 artCode: index + 1, // artLIst내 객체 구분에 필요한 key
                 artist: artist.name, // 작가명
