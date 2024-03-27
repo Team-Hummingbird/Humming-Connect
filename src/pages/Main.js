@@ -203,8 +203,6 @@ export default function Main(artWorkList) {
       return newItem;
   }
 
-
-
   return(    
     <>
       <div className={mainStyle.mainCont}>      
@@ -220,9 +218,29 @@ export default function Main(artWorkList) {
           </ul> {/* NEW */}
 
           <p className={mainStyle.mainListTitle}>Our Picks</p>
-          {CenterMode()}{/* OurPicks */}
-
-
+          {CenterMode()}{/* OurPicks */}          
+        </div>
+        <div className={mainStyle.promoCont}>
+          <ul>
+            <li>
+              <Link to='https://tbilisiartfair.art/en' target='_blank'>
+              <img src="https://tbilisiartfair.art/uploads/programme/1711377193.webp" alt="TBILISI ART FAIR img" />
+              <div className={mainStyle.promoText}>
+                <p>TBILISI ART FAIR(TAF)</p>
+                <p>11 - 14 APRIL</p>
+              </div>
+              </Link>
+            </li>
+            <li>
+              <Link to='https://www.artvancouver.net/'>
+                <video crossorigin="anonymous" playsinline="" preload="auto" loop="" tabindex="-1" autoplay="" src="https://video.wixstatic.com/video/80b7c2_c17d6630062b4563869aa3ee01e55726/480p/mp4/file.mp4"></video>
+                <div className={mainStyle.promoText}>
+                  <p>ART VANCOUVER</p>
+                  <p>11 - 14 APRIL</p>
+                </div>
+              </Link>
+            </li>
+          </ul>
         </div>
         <ul style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20}}>
           {artListItem}
