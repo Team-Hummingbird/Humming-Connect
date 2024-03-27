@@ -43,8 +43,8 @@ export default function App() {
             <Route path='findId' element={<FindId/>}/>
             <Route path='findPwd' element={<FindPwd/>}/>
           <Route path="/" element={<Layout/>}>
-            <Route index element={<Main/>}/>
-            <Route path="main" element={<Main/>}/> {/* 메인 */}           
+            <Route index element={<Main artList={ArtWorkList()}/>}/>
+            <Route path="main" element={<Main artList={ArtWorkList()}/>}/> {/* 메인 */}           
             <Route path="about" element={<About/>}/> {/* 회사소개 */}
             <Route path="search" element={<Search artList={ArtWorkList()}/>}/> {/* 검색 */}
             <Route path="detail" element={<Detail/>}/> {/* 상세페이지 */}
