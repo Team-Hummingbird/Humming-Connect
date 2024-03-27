@@ -5,7 +5,7 @@ export function ArtWorkList() {
 
   const [artList, setArtList] = useState([]);
 
-  const token = 'eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IiIsInN1YmplY3RfYXBwbGljYXRpb24iOiI2ZmY5NzI0MS04N2NkLTQ5YTQtOWY0Mi1mZGRjOTU0NTkwOGIiLCJleHAiOjE3MTE1MjY5MjUsImlhdCI6MTcxMDkyMjEyNSwiYXVkIjoiNmZmOTcyNDEtODdjZC00OWE0LTlmNDItZmRkYzk1NDU5MDhiIiwiaXNzIjoiR3Jhdml0eSIsImp0aSI6IjY1ZmE5OThkNWQ1ODk0MDAwZDMwYTRlZiJ9.E3KkLTNOVOc9KUyu4kvejh2tV37gazMzl5szElEgB-I';
+  const token = 'eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IiIsInN1YmplY3RfYXBwbGljYXRpb24iOiI2ZmY5NzI0MS04N2NkLTQ5YTQtOWY0Mi1mZGRjOTU0NTkwOGIiLCJleHAiOjE3MTIxMzQxMzEsImlhdCI6MTcxMTUyOTMzMSwiYXVkIjoiNmZmOTcyNDEtODdjZC00OWE0LTlmNDItZmRkYzk1NDU5MDhiIiwiaXNzIjoiR3Jhdml0eSIsImp0aSI6IjY2MDNkZDczMzFmNTcxMDAwZDNiNjU1MiJ9.gEfk_hNdrt_zDEkupDmuEbNRweVzKEU-oroY3PK8Ca4';
 
   //artworks 30 list 
   //https://api.artsy.net/api/artworks?size=30&page=5&exact=true&published=false
@@ -31,7 +31,7 @@ export function ArtWorkList() {
                 artist: artist.name, // 작가명
                 nationality: artist.nationality, // 국적
                 price: getRandomIntInclusive, // 가격  
-                birthday: artist.birthday, // 출생연도
+                birthday: artist.birthday === '' ? "unknown" : artist.birthday, // 출생연도
                 date: artist.birthday === '' ? "unknown " : (parseInt(artist.birthday) + (Math.floor(Math.random() * 50) + 20)) >= 2024 ? 2024 : (parseInt(artist.birthday) + (Math.floor(Math.random() * 10) + 20)), // 작품연도
                 imgUrl: artist._links.image === undefined ? (res.body._embedded.artists[49]._links.image.href).replace('{image_version}', 'square') : (artist._links.image.href).replace('{image_version}', 'square') // 이미지 url(이미지 사이즈 설정 가능)                    
               }

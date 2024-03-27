@@ -203,4 +203,5 @@
     color: black;
 }
 
+.slick-slide a {opacity: 0.8;}
 .slick-center a {opacity: 1; -ms-transform: scale(1.08); transform: scale(1.08);}
