@@ -60,7 +60,7 @@ export default function App() {
             <Route path="register" element={<Register/>}/> {/* 회원가입 */}
             <Route path="sell" element={<Sell/>}/> {/* 판매신청 */}
           </Route>
-          <Route patt="*" element={<Error/>}/> {/* 에러페이지 */}
+          <Route path="*" element={<Error/>}/> {/* 에러페이지 */}
           
           {/* <Route path="/login" element={<LayoutLogin/>}> */}
             {/* <Route index element={<Login currentLoginStatus={setLoginStatus}/>}/> 로그인 */}
