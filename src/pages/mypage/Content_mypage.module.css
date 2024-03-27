@@ -168,3 +168,17 @@
     padding-top: 5px;
     font-size: 16px;
   }
+
+  .inputBox{
+    display: block;
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 3px solid #C2C2C2;
+    height: 50px;
+    width : 100%;
+    margin: 0 auto;
+}
+.inputDiv .mainDiv{
+    margin-bottom: 20px;
+}
