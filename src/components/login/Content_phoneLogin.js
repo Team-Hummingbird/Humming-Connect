@@ -115,7 +115,7 @@ function Content_phoneLogin(){
                         </Link>
                         </li>
                     <li className={contentStyle.li}>
-                        <Link to="..phoneLogin" className={contentStyle.on} role='tab'>
+                        <Link to="../phoneLogin" className={contentStyle.on} role='tab'>
                             <span>전화번호 로그인</span>
                         </Link>
                         </li>

@@ -72,7 +72,6 @@ function PopUp(){
             setPwd("")
         }else if(id===memberList.members[1].id && pwd===memberList.members[1].password){
             // <NavLink to=""></NavLink>
-            
             setId("")
             setPwd("")
         }else if(id===memberList.members[2].id && pwd===memberList.members[2].password){
