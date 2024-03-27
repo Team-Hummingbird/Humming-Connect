@@ -1,0 +1,284 @@
+
+.redStar {     
+    color: red;
+}
+
+.sell {     /* 판매 신청 */
+    font-weight: 600;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    font-size: 24px;
+    width: 142px;
+}
+
+.sellInfo {     /* 판매자 정보 */
+    font-weight: 600;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.myInfoCheck {    /* 내 정보 입력 */
+    padding-top: 2px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.infoContainer {    /* 판매자 정보 내정보 입력 체크박스 all of them */
+    display: flex;
+    padding-bottom: 20px;
+}
+.infoCheckbox {     /* 체크박스와 라벨 사이 간격 조정 */
+    margin-left: 20px;
+}
+
+.sellInfoText1 {    /* 판매를 원하는 회원님의 정보를 입력해주세요 */
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.sellInfoText2 {    /* 입력한 정보는 판매신청 제출용으로만 활용됩니다. */
+    font-weight: 500;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+
+.sellInfoText3 {    /* 필수입력항목 */
+    padding-bottom: 8px;
+    padding-left: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.myInfoCheck1 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.myInfoCheck2 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.myInfoCheck3 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+
+.artInfo {  /* 작품 정보 */
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.artInfoText1 {     /* 판매를 원하는 작품의 정보를 입력해주세요 */
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.artInfoText2 {     /* 입력한 정보는 전문가의 감정평가에 사용되므로 정확한 정보를 입력해주세요. */
+    padding-left: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.artInfoText3 {     /* ※ 불분명한 정보를 입력한 경우, 판매신청이 보류되거나 거절될 수 있습니다. */
+    padding-bottom: 30px;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.artInfoText4 {     /* 필수입력항목 */
+    padding-bottom: 8px;
+    padding-left: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.artInfoCheck1 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+
+.artInfoCheck2 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+
+.artInfoCheck3 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+
+.artInfoCheck4 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+
+.artInfoCheck5 {
+    padding-left: 20px;
+    padding-bottom: 40px;
+}
+
+
+.artImg {   /* 작품 이미지 */
+    font-weight: 600;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.artImgText1 {  /* 판매할 작품의 이미지를 등록해주세요. */
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.artImgText2 {  /* 신속한 승인절차를 위해...*/
+    font-weight: 500;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.addImg {
+    
+    padding-bottom: 60px;
+    padding-left: 20px;
+}
+
+.addImgBlockInner {     /* 이미지 등록 빈칸 */
+    align-items: center;
+    border: 1px solid #ccc;
+    width: 1160px;
+    height: 150px;
+    border-radius: 5px; 
+}
+.addImgBlock {   /* 이미지 등록 ADD Image */
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-bottom: 60px;
+    font-weight: 500;
+    font-size: 16px;
+    opacity: 0.7;
+}
+.redStar1{     /* ※ 파일형식은 JPG, JPEG, PNG를 지원하며 파일크기는 최대 30MB까지 업로드 가능합니다. */
+    color: red;
+    font-weight: 600;
+}
+
+
+.imageUploadButton {
+    display: inline-block;
+    width: 1120px; 
+    height: 50px; 
+    background-color: #f0f0f0; 
+    color: #000;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.imageUploadButton:hover {
+    background-color: #e7e7e7;
+}
+
+.imgRegister {
+    margin-left: 20px;
+    width: 1160px; 
+    height: 50px; 
+    font-size: 16px; 
+    border-radius: 10px; 
+    border: 1px solid #ffffff; 
+    background-color: #D9D9D9; 
+    color: #FFFFFF; 
+    cursor: pointer; 
+    margin-bottom: 60px;
+    font-size: 16;
+}
+
+.imgRegister {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ccc; 
+    color: white;
+    cursor: not-allowed; 
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .imgRegisterActive {
+    background-color: #000; 
+    cursor: pointer; 
+  }
+  
+
+
+
+.inputField {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 1160px; 
+    height: 50px;
+    font-size: 16;
+}
+.inputFieldDetail {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 1160px; 
+    height: 200px;
+    font-size: 16;
+    resize: none;
+}
+
+.imageUploadContainer {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.imagePreviewContainer {
+    width: 1160px; 
+    height: 300px; 
+    display: flex; 
+    justify-content: center; 
+    margin: 10px auto; 
+    border: 1px solid #ccc; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    overflow: hidden; 
+    margin-left: 0px;
+}
+
+.imagePreview {
+    max-height: 100%; 
+    max-width: 100%; 
+    object-fit: contain;
+}
+
+
+.sellDoneText {
+    font-size: 24px;
+}
