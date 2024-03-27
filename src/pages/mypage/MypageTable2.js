@@ -46,7 +46,7 @@ function Mypage2(props){
             
                                 <li><Link to="../mypage2"><p id='table2' className={contentStyle.onPoint}>개인 판매 목록</p></Link></li>
             
-                                <li><Link to=""><p id='table3' className={contentStyle.pointer}>내 정보 수정</p></Link></li>
+                                <li><Link to="../mypage3"><p id='table3' className={contentStyle.pointer}>내 정보 수정</p></Link></li>
                             </ul>
                         </div>
 

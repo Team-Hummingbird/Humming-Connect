@@ -4,7 +4,6 @@
     padding: 0;
     padding-left: 80px;
     padding-bottom: 30px;
-
     /* padding-bottom: 20px; */
 }
 .ul2 {
@@ -13,7 +12,7 @@
     padding: 0;
     padding-bottom: 20px;
     margin-left: -200px;
-
+    width: 1400px;
 }
 .li{
     display: inline-block;
@@ -50,7 +49,7 @@
 }
 .tli5{
     display: inline-block;
-    margin-left: 19.5%;
+    margin-left: 19%;
     font-size: 18px;
 }
 
@@ -98,21 +97,20 @@
     margin-inline-end: 0px;
     font-weight: bold;
     margin: 0 auto;
-    width: 1600px;
+    width: 80%;
 }
 .tableDiv{
-    display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
     margin: 0 auto;
-    width: 1400px;
-    margin-top: -210px;
-    padding-bottom: 210px;
-    /* margin-right: 400px; */
-    padding-left: 150px;
+    width: 80%;
+    margin-top: -200px;
+    padding-bottom: 200px;
+    padding-left: 15%;
+    margin-left: 14%;
 }
 
 .line{
@@ -174,11 +172,66 @@
     font-size: 20px;
     border-radius: 5px;
     padding-left: 10px;
-    border: 3px solid #C2C2C2;
+    border: 1px solid #C2C2C2;
     height: 50px;
     width : 100%;
     margin: 0 auto;
 }
+  .inputBox2{
+    display: block;
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 1px solid #C2C2C2;
+    height: 50px;
+    width : 370px;
+}
 .inputDiv .mainDiv{
     margin-bottom: 20px;
+}
+.button{
+    display:inline;
+    position: absolute;
+    margin-left: 380px;
+    margin-top: -50px;
+    height: 50px;
+    width: 100px;
+    color: white;
+    background-color: #28282a;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button2{
+    display:inline;
+    position: relative;
+    font-size: 20px;
+    height: 50px;
+    width: 46%;
+    margin-left: 50px;
+    color: white;
+    background-color: #28282a;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 200px;
+    margin-top: 50px;
+}
+.button3{
+    display:inline;
+    position: relative;
+    font-size: 20px;
+    height: 50px;
+    width: 46%;
+    margin-left: 50px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 200px;
+    margin-top: 50px;
 }
