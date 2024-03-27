@@ -9,6 +9,7 @@ import Mypage from './pages/Mypage';
 import Order from './pages/Order';
 import Register from './pages/Register';
 import Sell from './pages/sell/Sell';
+import SellDone from './pages/sell/SellDone';
 import LayoutLogin from './layouts/LayoutLogin';
 import { useState } from 'react';
 
@@ -37,6 +38,7 @@ export default function App() {
             <Route path="order" element={<Order/>}/> {/* 주문 */}
             <Route path="register" element={<Register/>}/> {/* 회원가입 */}
             <Route path="sell" element={<Sell/>}/> {/* 판매신청 */}
+            <Route path="sellDone" element={<SellDone/>}/> {/* 판매완료 */}
           </Route> 
           <Route path="/login" element={<LayoutLogin/>}>
             <Route index element={<Login currentLoginStatus={setLoginStatus}/>}/> {/* 로그인 */}
