@@ -1,5 +1,5 @@
 /* Search 검색페이지 */
-.main_cont {min-height: calc(100vh - 160px); max-width:1200px;}
+.main_cont {min-height: calc(100vh - 160px); max-width:1600px;}
 .search_cont {display: flex; flex-direction: column; align-items: center; padding:60px 20px; background-color: #ffffff; }
 
 /* searchBar */
@@ -35,7 +35,6 @@ input::-webkit-search-results-decoration{
 .searchResultList > ul {display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;}
 .searchResultList > ul > li { margin-bottom: 40px; }
 .searchResultList > ul > li > a {display: block;}
-.searchResultList > ul > li > a > img {display: block;  width: 100%;}
 .searchResultList > ul > li > a > img {display: block;  width: 100%;}
 .searchResultList .descriptText {padding:10px 0;}
 .searchResultList .descriptText > p {font-size: 16px; font-weight: 500; color: #28282a;}

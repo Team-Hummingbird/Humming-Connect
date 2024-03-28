@@ -34,11 +34,6 @@ export default function App() {
   //   setIsLogin(status);
   // }
 
-  // <Route path="about" element={<Company/>}/> {/* 회사소개 */}
-  // <Route path="mypage" element={<Mypage/>}/> {/* 마이페이지 */}
-  // <Route path="order" element={<Order/>}/> {/* 주문 */}
-  // <Route path="register" element={<Register/>}/> {/* 회원가입 */}
-  // <Route path="sell" element={<Sell/>}/> {/* 판매신청 */}
   return (
 
     <>      
@@ -50,8 +45,8 @@ export default function App() {
             <Route path='findId' element={<FindId/>}/>
             <Route path='findPwd' element={<FindPwd/>}/>
           <Route path="/" element={<Layout/>}>
-            <Route index element={<Main/>}/>
-            <Route path="main" element={<Main/>}/> {/* 메인 */}           
+            <Route index element={<Main artList={ArtWorkList()}/>}/>
+            <Route path="main" element={<Main artList={ArtWorkList()}/>}/> {/* 메인 */}           
             <Route path="about" element={<About/>}/> {/* 회사소개 */}
             <Route path="search" element={<Search artList={ArtWorkList()}/>}/> {/* 검색 */}
             <Route path="detail" element={<Detail/>}/> {/* 상세페이지 */}

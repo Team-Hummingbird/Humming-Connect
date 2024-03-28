@@ -31,7 +31,7 @@ export function ArtWorkList() {
                 artist: artist.name, // 작가명
                 nationality: artist.nationality, // 국적
                 price: getRandomIntInclusive, // 가격  
-                birthday: artist.birthday, // 출생연도
+                birthday: artist.birthday === '' ? "unknown" : artist.birthday, // 출생연도
                 date: artist.birthday === '' ? "unknown " : (parseInt(artist.birthday) + (Math.floor(Math.random() * 50) + 20)) >= 2024 ? 2024 : (parseInt(artist.birthday) + (Math.floor(Math.random() * 10) + 20)), // 작품연도
                 imgUrl: artist._links.image === undefined ? (res.body._embedded.artists[49]._links.image.href).replace('{image_version}', 'square') : (artist._links.image.href).replace('{image_version}', 'square') // 이미지 url(이미지 사이즈 설정 가능)                    
               }
