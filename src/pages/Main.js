@@ -31,7 +31,7 @@ export default function Main(artWorkList) {
       dots : true,
       infinite : true,
       autoplay : true,
-      autoplaySpeed : 3000,
+      autoplaySpeed : 5000,
       speed : 1000,
       slidesToShow : 1,
       slidesToScroll : 1,
@@ -40,11 +40,11 @@ export default function Main(artWorkList) {
       useCSS : true,
       arrows : false,
     };
-    //<img src={artsList[bannerIndex[0]].imgUrl} /> 
+    
     return (
       <Slider {...settings}>
         <div class={mainStyle.sliderBox}>
-          <Link to='./about'>
+          <Link to='/about'>
             <div class={mainStyle.imgBox}>
               <img src={`${process.env.PUBLIC_URL}/img/banner01.svg`} alt="banner image"/>
             </div>
@@ -57,7 +57,7 @@ export default function Main(artWorkList) {
           </Link>          
         </div>
         <div class={mainStyle.sliderBox}>
-          <Link to='./search'>
+          <Link to='/search'>
             <div class={mainStyle.imgBox}>
               <img src={`${process.env.PUBLIC_URL}/img/banner02.jpg`} alt="banner image"/>
             </div>
@@ -70,7 +70,7 @@ export default function Main(artWorkList) {
           </Link>
         </div>
         <div class={mainStyle.sliderBox}>
-          <Link to='./sell'>
+          <Link to='/sell'>
             <div class={mainStyle.imgBox}>
               <img src={`${process.env.PUBLIC_URL}/img/banner03.jpg`} alt="banner image"/>
             </div>
@@ -99,58 +99,21 @@ export default function Main(artWorkList) {
 
     return(
       <div className="slider-container">
-      <Slider {...settings}>
-        
-        <div className={mainStyle.centerList}>
-          <Link>
-            <img src={artList[0]?.imgUrl} alt="Our Picks art image"/>
-            <div className={mainStyle.descriptText}>
-              <p>{artList[0]?.artist}</p>
-              <p>{artList[0]?.title}, {artList[0]?.year}</p>          
-              <p>￦{artList[0]?.price}</p>          
+      <Slider {...settings}>        
+        {[...Array(parseInt(10))].map((n,index) => {
+          return(
+            <div className={mainStyle.centerList}>
+              <Link to={`/detail/${artList[index + 3]?.artCode}/${artList[index + 3]?.price}`}>
+                <img src={artList[index + 3]?.imgUrl} alt="Our Picks art image"/>
+                <div className={mainStyle.descriptText}>
+                  <p>{artList[index + 3]?.artist}</p>
+                  <p>{artList[index + 3]?.title}, {artList[index]?.year}</p>          
+                  <p>￦{artList[index + 3]?.price.toLocaleString()}</p>          
+                </div>
+              </Link>
             </div>
-          </Link>
-        </div>
-        <div className={mainStyle.centerList}>
-          <Link>
-            <img src={artList[0]?.imgUrl} alt="Our Picks art image"/>
-            <div className={mainStyle.descriptText}>
-              <p>{artList[0]?.artist}</p>
-              <p>{artList[0]?.title}, {artList[0]?.year}</p>          
-              <p>￦{artList[0]?.price}</p>          
-            </div>
-          </Link>
-        </div>
-        <div className={mainStyle.centerList}>
-          <Link>
-            <img src={artList[0]?.imgUrl} alt="Our Picks art image"/>
-            <div className={mainStyle.descriptText}>
-              <p>{artList[0]?.artist}</p>
-              <p>{artList[0]?.title}, {artList[0]?.year}</p>          
-              <p>￦{artList[0]?.price}</p>          
-            </div>
-          </Link>
-        </div>
-        <div className={mainStyle.centerList}>
-          <Link>
-            <img src={artList[0]?.imgUrl} alt="Our Picks art image"/>
-            <div className={mainStyle.descriptText}>
-              <p>{artList[0]?.artist}</p>
-              <p>{artList[0]?.title}, {artList[0]?.year}</p>          
-              <p>￦{artList[0]?.price}</p>          
-            </div>
-          </Link>
-        </div>
-        <div className={mainStyle.centerList}>
-          <Link>
-            <img src={artList[0]?.imgUrl} alt="Our Picks art image"/>
-            <div className={mainStyle.descriptText}>
-              <p>{artList[0]?.artist}</p>
-              <p>{artList[0]?.title}, {artList[0]?.year}</p>          
-              <p>￦{artList[0]?.price}</p>          
-            </div>
-          </Link>
-        </div>
+          );
+        })}
       </Slider>
     </div>
     )
@@ -161,20 +124,24 @@ export default function Main(artWorkList) {
 
   //NEW 리스트
   const newListItem = () => {
-    const index = Math.floor(Math.random() * 49);
-      const newItem = (
+    return (
+      [...Array(parseInt(4))].map((n, index) => {
+      const idx = Math.floor(Math.random() * 30);
+      console.log('idx : ' + idx);
+      return (
         <li>
-          <Link>
-            <div><img src={artList[index]?.imgUrl} alt="new art Item img" /></div>
+          <Link to={`/detail/${artList[idx + 2]?.artCode}/${artList[idx + 2]?.price}`}>
+            <div><img src={artList[idx + 2]?.imgUrl} alt="new art Item img" /></div>
             <div className={mainStyle.newText}>
-              <p>{artList[index]?.title}</p>
-              <p>{artList[index]?.artist}</p>
+              <p>{artList[idx + 2]?.title}</p>
+              <p>{artList[idx + 2]?.artist}</p>
             </div>
           </Link>
         </li>
-      )
-      return newItem;
+      );
+    }));
   }
+  console.log(newListItem());
 
   return(    
     <>
@@ -185,9 +152,6 @@ export default function Main(artWorkList) {
         <div className={mainStyle.mainListBox}>
           <p className={mainStyle.mainListTitle}>NEW</p>
           <ul>
-            {newListItem()}
-            {newListItem()}
-            {newListItem()}
             {newListItem()}
           </ul>                  
         </div>
