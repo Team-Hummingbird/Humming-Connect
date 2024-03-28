@@ -78,6 +78,7 @@ function Detail(artWorkList) {
         </div>
     </div>
 
+        <div className={detailStyle.down}>
             <p className={detailStyle.Aw}>Artwork</p>
         <div className={detailStyle.ExplanationBox}>
             <div className={detailStyle.a1}>
@@ -106,6 +107,7 @@ function Detail(artWorkList) {
                 </div>
             </div>
                 <p className={detailStyle.Explain}>머리카락과 식물을 그린 몰리 그린(Molly Greene)의 감미로운 그림은 종종 마그리트(Magritte)의 초현실주의 스타일을 연상시키는 작품에서 친숙한 것을 익숙하지 않은 것으로 변화시킵니다. 과학, 기술, 젠더, 철학에 학문적으로 관여한 Greene은 자신이 고민하고 있는 주제를 통해 사고하는 수단으로 예술로 전환했습니다. 자신의 갈색 머리를 뮤즈로 삼아 Greene은 자신의 작품인 Ponies(2020)에서 알 수 있듯이 자연스러운 것을 특이한 것으로 바꾸려고 자주 노력했습니다. 그 안에서 그녀의 머리카락은 포니테일 식물로 새로운 생명을 얻었고, Overgrown(2019)에서는 땅바닥에 물결치는 파도 속에 놓여 있고, 그 사이에 식물이 돋아났습니다. 그녀의 작품에 등장하는 동식물은 똑같이 이질적입니다. Watch Yourself(2020)에 등장하는 초자연적인 꽃은 그 자체로 불길한 생명을 갖고 있는 것처럼 보이며, 이는 그녀의 작업에 자주 영향을 미치는 SF 주제를 반영합니다.</p>
+        </div>
         </div>
 
         </div>
