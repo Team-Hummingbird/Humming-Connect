@@ -13,7 +13,7 @@ export function ArtWorkList() {
   //Api호출 후 JSON데이터에 접근해 필요한 데이터만 추출
   useEffect(
     () => {
-      new Promise((resolve, reject) => {
+      const callAPI = new Promise((resolve, reject) => {
         //_embedded        
         request
           .get('https://api.artsy.net/api/artists?gene_id=4d90d18fdcdd5f44a5000025&size=50&page=1&exact=true')
@@ -74,6 +74,9 @@ export function ArtWorkList() {
             //console.log('new Artist afterall : ' + newArtList);
           })
       })
+      return () => {
+        callAPI();
+      }
     }, []
 
 

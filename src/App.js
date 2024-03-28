@@ -23,23 +23,20 @@ import Error from './pages/Error';
 import { useState } from 'react';
 
 export default function App() {
-  // // login 상태 초기 state 설정
-  // // const [isLogin, setIsLogin] = useState(true); //로그인 상태
-
-  // /* 로그인 한 상태의 header로 사용하고 싶은 경우 아래 주석 해제하고 사용해주세요. */
-  // const [isLogin, setIsLogin] = useState(true); //로그인 안한 상태
+  // login 상태 초기 state 설정
+  const [isLogin, setIsLogin] = useState(true); //로그인 안한 상태
 
   // // login 상태 변경하는 함수
-  // const setLoginStatus = (status) => {
-  //   setIsLogin(status);
-  // }
+  const setLoginStatus = (status) => {
+    setIsLogin(status);
+  }
 
   return (
 
     <>      
       <BrowserRouter>
         <Routes>
-            <Route path='login' element={<Login/>}/>
+            <Route path='login' element={<Login isLogin={setLoginStatus}/>}/>
             <Route path='easyLogin' element={<EasyLogin/>}/>
             <Route path='phoneLogin' element={<PhoneLogin/>}/>
             <Route path='findId' element={<FindId/>}/>

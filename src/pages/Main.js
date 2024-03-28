@@ -8,16 +8,21 @@ import ArtItem from '../components/ArtItem'
 
 export default function Main(artWorkList) {  
     const [artsList, setArtsList] = useState([]);
-    const [bannerIndex, setBannerIndex] = useState([7,29,14]);
+    const [newIndex, setNewIndex] = useState([7,29,14,8]);
 
     useEffect(
       () => {
+        console.log('new Index '+newIndex);
         if(artWorkList.artList === undefined){
 
         } else {
           setArtsList(JSON.parse(artWorkList.artList)); //작품리스트 데이터 저장
+          setNewIndex(newIndex.map((num, index ) =>  num = Math.floor(Math.random() * 49))) // New 이미지 랜덤 변경을 위한 index 숫자 랜덤 생성 및 state 설정
         }        
-        setBannerIndex(bannerIndex.map(num => {num = Math.floor(Math.random() * 49)})) // 배너 이미지 랜덤 변경을 위한 index 숫자 랜덤 생성 및 state 설정
+        
+        return () => {
+          setNewIndex();
+        }
       },
       []
     );
@@ -40,7 +45,7 @@ export default function Main(artWorkList) {
       useCSS : true,
       arrows : false,
     };
-    
+
     return (
       <Slider {...settings}>
         <div class={mainStyle.sliderBox}>
@@ -96,19 +101,19 @@ export default function Main(artWorkList) {
       slidesToShow: 3,
       speed: 500
     };
-
+    
     return(
-      <div className="slider-container">
+      <div className="slider-container" key="pick">
       <Slider {...settings}>        
         {[...Array(parseInt(10))].map((n,index) => {
           return(
-            <div className={mainStyle.centerList}>
-              <Link to={`/detail/${artList[index + 3]?.artCode}/${artList[index + 3]?.price}`}>
-                <img src={artList[index + 3]?.imgUrl} alt="Our Picks art image"/>
+            <div className={mainStyle.centerList} key={artsList[index + 3]?.artCode}>
+              <Link to={`/detail/${artsList[index + 3]?.artCode}/${artsList[index + 3]?.price}`} key={artsList[index + 3]?.artCode}>
+                <img src={artsList[index + 3]?.imgUrl} alt="Our Picks art image"/>
                 <div className={mainStyle.descriptText}>
-                  <p>{artList[index + 3]?.artist}</p>
-                  <p>{artList[index + 3]?.title}, {artList[index]?.year}</p>          
-                  <p>￦{artList[index + 3]?.price.toLocaleString()}</p>          
+                  <p>{artsList[index + 3]?.artist}</p>
+                  <p>{artsList[index + 3]?.title}, {artsList[index]?.year}</p>          
+                  <p>￦{artsList[index + 3]?.price.toLocaleString()}</p>          
                 </div>
               </Link>
             </div>
@@ -120,28 +125,26 @@ export default function Main(artWorkList) {
   } // our picks slide
 
   // 이미지/작가/타이틀,연도/가격 정보 표시하는 <li></li> 태그 
-  const artListItem = (JSON.parse(artWorkList.artList))?.map(artItem => <ArtItem key={artItem.artCode} art={artItem}/>);
+  const artListItem = artsList?.map(artItem => <ArtItem key={artItem.artCode} art={artItem}/>);
 
   //NEW 리스트
   const newListItem = () => {
     return (
-      [...Array(parseInt(4))].map((n, index) => {
-      const idx = Math.floor(Math.random() * 30);
-      console.log('idx : ' + idx);
+      newIndex.map((n, index) => {
+      // const idx = Math.floor(Math.random() * 7);
       return (
-        <li>
-          <Link to={`/detail/${artList[idx + 2]?.artCode}/${artList[idx + 2]?.price}`}>
-            <div><img src={artList[idx + 2]?.imgUrl} alt="new art Item img" /></div>
+        <li key={index}>
+          <Link to={`/detail/${artsList[newIndex[index]]?.artCode}/${artsList[newIndex[index]]?.price}`}>
+            <div><img src={artsList[newIndex[index]]?.imgUrl} alt="new art Item img" /></div>
             <div className={mainStyle.newText}>
-              <p>{artList[idx + 2]?.title}</p>
-              <p>{artList[idx + 2]?.artist}</p>
+              <p>{artsList[newIndex[index]]?.title}</p>
+              <p>{artsList[newIndex[index]]?.artist}</p>
             </div>
           </Link>
         </li>
       );
     }));
   }
-  console.log(newListItem());
 
   return(    
     <>
