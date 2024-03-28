@@ -45,14 +45,14 @@ function Detail(artWorkList) {
             <div className={detailStyle.Img1}>
                 <img
                 alt="액자 이미지"
-                src="img/photoFrame.png"
+                src="/img/photoFrame.png"
                 />
                 <p className={detailStyle.Uw}>Unique work</p>
             </div>
             <div className={detailStyle.Img2}>
                 <img
                 alt="상장 이미지"
-                src="img/crapeImg.png"
+                src="/img/crapeImg.png"
                 />
                 <p className={detailStyle.Ica}>Includes a Certificate of Authenticity</p>
             </div>
@@ -69,16 +69,16 @@ function Detail(artWorkList) {
             <div className={detailStyle.DeliveryBtn}>
             <p className={detailStyle.Delivery}>배송 관련 사항</p>
             <button className={detailStyle.btn} onClick={ () => {setIsDelivery(!isDelivery)} }>⌵</button>
-            {isDelivery === true ? <Delivery/> : null}
             </div>
+            {isDelivery === true ? <Delivery/> : null}
             </div>
             <hr className={detailStyle.Hr2}/>
             <div className={detailStyle.HcgBox}>
             <div className={detailStyle.HcgBtn}>
             <p className={detailStyle.Hcg}>Humming Connect Guarantee</p>
             <button className={detailStyle.btn1} onClick={ () => {setIsHcg(!isHcg)} }>⌵</button>
-            {isHcg === true ? <Hcg/> : null}
             </div>
+            {isHcg === true ? <Hcg/> : null}
             </div>
             <hr className={detailStyle.Hr3}/>
         </div>

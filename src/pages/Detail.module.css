@@ -440,7 +440,7 @@
 
 .btn,
 .btn1 {
-    margin-top: 20px;
+    margin-top: 15px;
     background-color: #ffffff;
     border: none;
 }
@@ -450,6 +450,6 @@
 }
 
 .down {
-    width: 1600px;
-    margin-left: 110px;
+    max-width: 1600px;
+    margin: 0 auto;
 }
