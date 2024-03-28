@@ -92,17 +92,21 @@ import userProfile from '../../data/Profile.json';
     return (
     <>
 <div className={styles.orderPage}>
-        <div className={styles.order}>주문
+        <div className={styles.order}>주문</div>
+        <div className={styles.productAll}>
         <div className={styles.product}>
-        </div>
+            <img
+            src="/img/Smallimg.png"
+            style={{height: '120px'}}
+            />
+            </div>
             <div className={styles.productInfo}>
                 <div className={styles.productName}>Molly Greene</div>
                 <div className={styles.productSince}>Splinter, 2024</div>
                 <div className={styles.productPrice}>￦6,500,000</div>
             </div>
-        </div>
-                <div className={styles.line}>
             </div>
+                <div className={styles.line}>
         </div>
         <div className={styles.orderInfo}>배송 정보</div>
         <div className={styles.infoContainer}>
@@ -229,7 +233,8 @@ import userProfile from '../../data/Profile.json';
             </button>
 
             </div>
-</div>
+        </div>
+
     </>
     
     );
