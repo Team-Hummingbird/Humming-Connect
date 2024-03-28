@@ -1,16 +1,44 @@
 import { Link } from 'react-router-dom';
 import contentStyle from './Content_mypage.module.css'
+import { useState, useEffect } from 'react';
+import popStyle from '../../components/PopUp.module.css';
 
 
 function Mypage3(){
-
-    function btn(){
-        alert('정보 수정 완료')
+    const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+    const openPopUp = () => {
+        setIsPopUpOpen(true)
     }
 
+    function PopUp(){
+    
+      //확인 버튼 클릭시, 팝업창 비활성화
+        const onClickHandler = (e) => {
+        e.target.parentNode.style.display = 'none';
+        e.target.parentNode.previousSibling.style.display = 'none';
+        setIsPopUpOpen(false)
+        }
+        
+    
+        return(
+        <>
+            <div className={popStyle.popBg}></div>
+            <div className={popStyle.popUp_cont}>
+                <img src='/adress.png' style={{marginTop:'-20px'}}/>
+                <button className={popStyle.popBtn} onClick={onClickHandler}>확인</button>
+            </div>
+        </>
+        );
+    }
+
+    function btn() {
+        alert('정보 수정 완료')
+    }
+    
+    
                 return (
                     <>
-
+                    
                         <div className={contentStyle.mainDiv} id='상단'>
                             <div className={contentStyle.mainText}>
                                 <h1><p>내 정보 수정</p></h1>
@@ -40,7 +68,7 @@ function Mypage3(){
                             <div className={contentStyle.mainDiv}>
                                 <b style={{fontSize:'20px'}}>주소</b>
                                 <input className={contentStyle.inputBox2} placeholder='우편 번호' />
-                                <button className={contentStyle.button} placeholder='예시)humming1234'>주소 검색</button>
+                                <button className={contentStyle.button} onClick={openPopUp}>주소 검색</button>
                             </div>
                             <div className={contentStyle.mainDiv}>
                                 <input className={contentStyle.inputBox} placeholder='상세 주소(동,호수)'/>
@@ -62,7 +90,7 @@ function Mypage3(){
                             </div>
                             
                         </div>
-
+                    {isPopUpOpen && PopUp()}
                     </>
                 );
             }

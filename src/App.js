@@ -62,10 +62,8 @@ export default function App() {
             <Route path="register" element={<Register/>}/> {/* 회원가입 */}
             <Route path="sell" element={<Sell/>}/> {/* 판매신청 */}
             <Route path="sellDone" element={<SellDone/>}/> {/* 판매완료 */}
-
-          </Route>
+          </Route> 
           <Route path="*" element={<Error/>}/> {/* 에러페이지 */}
-          
           {/* <Route path="/login" element={<LayoutLogin/>}> */}
             {/* <Route index element={<Login currentLoginStatus={setLoginStatus}/>}/> 로그인 */}
           {/* </Route>                   */}
