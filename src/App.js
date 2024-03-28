@@ -19,8 +19,8 @@ import Register from './pages/Register';
 import { ArtWorkList } from './data/ArtWorkList';
 import Sell from './pages/sell/Sell';
 import SellDone from './pages/sell/SellDone';
-import LayoutLogin from './layouts/LayoutLogin';
 import Error from './pages/Error';
+import { useState } from 'react';
 
 export default function App() {
   // // login 상태 초기 state 설정
@@ -64,7 +64,6 @@ export default function App() {
             <Route path="sellDone" element={<SellDone/>}/> {/* 판매완료 */}
           </Route> 
           <Route path="*" element={<Error/>}/> {/* 에러페이지 */}
-          
           {/* <Route path="/login" element={<LayoutLogin/>}> */}
             {/* <Route index element={<Login currentLoginStatus={setLoginStatus}/>}/> 로그인 */}
           {/* </Route>                   */}
