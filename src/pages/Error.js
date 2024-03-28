@@ -11,7 +11,7 @@ function ErrorPage() {
             <div className={errorStyle.pageNotFound}>Page Not Found</div>
             <div className={errorStyle.sorry}>죄송합니다 해당 페이지는 찾을 수 없습니다.</div>
             <div className={errorStyle.b}>
-            <Link to="/Main">
+            <Link to="/main">
             <button className={errorStyle.homeButton}>홈으로</button>
             </Link>    
             </div>

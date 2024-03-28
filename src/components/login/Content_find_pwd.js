@@ -1,14 +1,106 @@
 import contentStyle from './Content_login.module.css'
 import { Link } from 'react-router-dom';
+import popStyle from '../../components/PopUp.module.css';
+import { useState,useEffect } from 'react';
+import { getMemberList } from '../../apis/memberAPI';
 
 function Content_find_pwd(){
-    function btn(){
+    const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+    const [text, setText]=useState("");
+    const [text2, setText2]=useState("");
+    const [memberList, setMemberList]=useState([]);
+    const [phone , setPhone] = useState("")
+    const [activeNumber , setActiveNumber] = useState()
+    const [random ,setRandom]=useState();
+    const [id, setId]=useState("");
+
+    const openPopUp = () => {
+        setIsPopUpOpen(true)
+    }
+    useEffect(
+        ()=>{
+            setMemberList(getMemberList());
+            setRandom(Math.floor(Math.random()*(9999-100)+1111)+1)
+        },
+        []
+        )
         
-        alert('인증 번호가 전송 되었습니다.');
+    
+    function PopUp(){
+    
+      //확인 버튼 클릭시, 팝업창 비활성화
+        const onClickHandler = (e) => {
+        e.target.parentNode.style.display = 'none';
+        e.target.parentNode.previousSibling.style.display = 'none';
+        setIsPopUpOpen(false)
+        }
+        
+    
+        return(
+        <>
+            <div className={popStyle.popBg}></div>
+            <div className={popStyle.popUp_cont}>
+                <p className={popStyle.popText}>{text}</p>
+                <p className={popStyle.popText}>{text2}</p>
+                <button className={popStyle.popBtn} onClick={onClickHandler}>확인</button>
+            </div>
+        </>
+        );
     }
-    function btn2(){
-        alert('입력하신 휴대폰 번호로 \n초기 비밀 번호 가 전송 되었습니다.\n로그인 후 변경 부탁 드립니다.');
+    const onClickHandler=()=>{
+        if(phone==="" || activeNumber==="" || id===""){
+            setText("가입된 회원 정보가 없습니다.")
+            setText2("확인후 다시 입력해 주세요.")
+            openPopUp(true)
+            setId("")
+            setPhone("")
+            setActiveNumber("")
+        }else if(phone===memberList.members[0].phoneNumber && activeNumber==random && id===memberList.members[0].id){
+            setId("")
+            setPhone("")
+            setActiveNumber("")
+        }else if(phone===memberList.members[1].phoneNumber && activeNumber==random && id===memberList.members[1].id){
+            setId("")
+            setPhone("")
+            setActiveNumber("")
+        }else if(phone===memberList.members[2].phoneNumber && activeNumber==random && id===memberList.members[2].id){
+            setId("")
+            setPhone("")
+            setActiveNumber("")
+        }else{
+            setText("인증번호가 틀렸습니다")
+            setText2("확인후 다시 입력해 주세요.")
+            console.log(random)
+            console.log(activeNumber)
+            openPopUp(true)
+            setId("")
+            setPhone("")
+            setActiveNumber("")
+        }
     }
+    const onIdChange=(e)=>{
+        setId(e.target.value)
+    }
+    const onPhoneChange=(e)=>{
+        setPhone(e.target.value)
+    }
+    const onAcvChange=(e)=>{
+        setActiveNumber(e.target.value)
+    }
+
+    function randomsNumber(){
+        if(phone === memberList.members[0].phoneNumber&& id===memberList.members[0].id || phone === memberList.members[1].phoneNumber&& id===memberList.members[1].id||phone === memberList.members[2].phoneNumber && id===memberList.members[2].id){
+            console.log(random)
+            setText("인증 번호가 전송 되었습니다.")
+            setText2(`인증 번호 : ${random}`)
+            openPopUp(true)
+        }else{
+            setText("가입된 회원 정보가 없습니다.")
+            setText2("확인후 다시 입력해 주세요.")
+            openPopUp(true)
+        }
+    }
+
 
     return(
         <>
@@ -19,14 +111,14 @@ function Content_find_pwd(){
                         비밀번호 찾기
                     </div>
                     <div className={contentStyle.input}>
-                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='아 이 디' />
+                        <input onChange={onIdChange} value={id} className={contentStyle.inputBox} type='text' id='id' placeholder='아 이 디' />
                     </div>
                     <div className={contentStyle.input}>
-                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='+82 | 전 화 번 호' />
-                        <button onClick={btn} className={contentStyle.phoneButton}>인증번호</button>
+                        <input onChange={onPhoneChange} value={phone} className={contentStyle.inputBox} type='text' id='phone' placeholder='+82 | 전 화 번 호' />
+                        <button onClick={randomsNumber} value={random} className={contentStyle.phoneButton}>인증번호</button>
                     </div>
                     <div className={contentStyle.input}>
-                        <input className={contentStyle.inputBox} type='text' id='id' placeholder='인 증 번 호'/>
+                        <input onChange={onAcvChange} value={activeNumber} className={contentStyle.inputBox} type='text' id='activeNumber' placeholder='인 증 번 호'/>
                     </div>
                     <div className={contentStyle.text}>
                     <ul className={contentStyle.loginCheackBox}>
@@ -37,13 +129,12 @@ function Content_find_pwd(){
                     </div>
 
                     <div>
-                        <Link to="../login" className={contentStyle.text_button}>
-                        <button onClick={btn2} className={contentStyle.button}>비밀번호 찾기</button>
-                        </Link>
+                        <button onClick={onClickHandler} className={contentStyle.button}>비밀번호 찾기</button>
                     </div>
                 </div>
             </div>
         </div>
+        {isPopUpOpen && PopUp()}
         </>
     )
 }
