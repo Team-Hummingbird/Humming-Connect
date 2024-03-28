@@ -14,7 +14,8 @@ import Detail from './pages/Detail';
 import Mypage from './pages/mypage/Mypage';
 import Mypage2 from './pages/mypage/MypageTable2';
 import Mypage3 from './pages/mypage/MypageTable3';
-import Order from './pages/Order';
+import Order from './pages/order/Order';
+import Payment from './pages/order/Payment';
 import Register from './pages/Register';
 import { ArtWorkList } from './data/ArtWorkList';
 import Sell from './pages/sell/Sell';
@@ -54,6 +55,7 @@ export default function App() {
             <Route path="mypage2" element={<Mypage2 props={ArtWorkList()}/>}/> {/* 마이페이지2 */}
             <Route path="mypage3" element={<Mypage3/>}/> {/* 마이페이지3 */}
             <Route path="order" element={<Order/>}/> {/* 주문 */}
+            <Route path="payment" element={<Payment/>}/> {/* 결제 페이지 */}
             <Route path="register" element={<Register/>}/> {/* 회원가입 */}
             <Route path="sell" element={<Sell/>}/> {/* 판매신청 */}
             <Route path="sellDone" element={<SellDone/>}/> {/* 판매완료 */}
