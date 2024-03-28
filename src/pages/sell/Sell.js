@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import styles from './Sell.module.css';
 import React, { useEffect, useState } from 'react';
+import userProfile from '../../data/Profile.json';
+
 
 
 
@@ -14,7 +16,8 @@ function Sell () {
         }
     }
 
-    const [isInfoAutoFilled, setIsInfoAutoFilled] = useState(false);
+
+    const [isInfoAutoFilled, setIsInfoAutoFilled] = useState(true);
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
@@ -31,16 +34,17 @@ function Sell () {
     };
 
     useEffect(() => {
-            if (isInfoAutoFilled) {
-                setName('허밍커넥트');
-                setPhoneNumber('02-1234-5678');
-                setEmail('hummingConnect@hummingConnect.com');
-            } else {
-                setName('');
-                setPhoneNumber('');
-                setEmail('');
-            }
-        }, [isInfoAutoFilled]);
+        if (isInfoAutoFilled) {
+            setName(userProfile.name);
+            setPhoneNumber(userProfile.phoneNumber);
+            setEmail(userProfile.email);
+        } else {
+          // 자동 채움이 비활성화된 경우, 필드를 비워줍니다.
+            setName('');
+            setPhoneNumber('');
+            setEmail('');
+        }
+    }, [isInfoAutoFilled, userProfile]);
 
         useEffect(() => {
             if (!image) {
@@ -75,8 +79,8 @@ function Sell () {
         <div className={styles.sellInfo}>판매자 정보</div>
         <input
                 type="checkbox"
-                checked={isInfoAutoFilled}
-                onChange={onChangeHandler}
+                checked={true}
+                readOnly
                 className={styles.infoCheckbox}
             />
         <div className={styles.myInfoCheck}>내 정보 입력</div>
@@ -93,30 +97,39 @@ function Sell () {
     <div className={styles.myInfoCheck1}>
         <div className={styles.nameBlockInner}>
             <div className={styles.nameBlock}>
-                <input type="text" value={name} onChange={(e) => 
-                    setName(e.target.value)} 
-                className={styles.inputField} 
-                placeholder='이름 Name * 예시)허밍커넥트'/>
+                <input type="text" 
+                value={name} 
+                onChange={(e) => setName(e.target.value)} 
+                className={isInfoAutoFilled ? `${styles.inputField} ${styles.disabledInput}` : styles.inputField} 
+                placeholder='이름 Name * 예시)허밍커넥트'
+                disabled={isInfoAutoFilled}
+                />
             </div>
         </div>
     </div>
     <div className={styles.myInfoCheck2}>
         <div className={styles.phoneBlockInner}>
             <div className={styles.phoneBlock}>
-                <input type="text" value={phoneNumber} onChange={(e) => 
-                    setPhoneNumber(e.target.value)} 
-                className={styles.inputField} 
-                placeholder='전화번호 Phone Number * (010-1234-5678) '/>
+                <input type="text" 
+                value={phoneNumber} 
+                onChange={(e) => setPhoneNumber(e.target.value)} 
+                className={isInfoAutoFilled ? `${styles.inputField} ${styles.disabledInput}` : styles.inputField} 
+                placeholder='전화번호 Phone Number * (010-1234-5678) '
+                disabled={isInfoAutoFilled}
+                />
             </div>
         </div>
     </div>
     <div className={styles.myInfoCheck3}>
         <div className={styles.emailBlockInner}>
             <div className={styles.emailBlock}>
-            <input type="text" value={email} onChange={(e) => 
-                setEmail(e.target.value)} 
-            className={styles.inputField} 
-            placeholder='이메일 Email * 예시)hummingConnect@hummingConnect.com'/>
+            <input type="text" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            className={isInfoAutoFilled ? `${styles.inputField} ${styles.disabledInput}` : styles.inputField} 
+            placeholder='이메일 Email * 예시)hummingConnect@hummingConnect.com'
+            disabled={isInfoAutoFilled}
+            />
             </div>
         </div>
     </div>
