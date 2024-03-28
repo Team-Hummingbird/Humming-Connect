@@ -142,7 +142,7 @@ function Content_phoneLogin(){
                     </div>
                     <div className={contentStyle.text}>
                         <ul className={contentStyle.loginCheackBox}>
-                            <li onClick={callActiveNumber} className={contentStyle.loginSave} >인증 번호가 오지 않나요?</li>{/*테스트겸 따로 링크 alert 써야하나? 아니면 다른 방법?*/} 
+                            <li onClick={callActiveNumber} className={contentStyle.loginSave} >인증 번호가 오지 않나요?</li>
                         </ul>
                     </div>
 

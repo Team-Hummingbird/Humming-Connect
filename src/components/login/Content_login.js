@@ -128,7 +128,6 @@ function PopUp(){
                         <ul className={contentStyle.loginCheackBox}>
                             <li><input id="keep" type='checkbox'/></li>
                             <label htmlFor="keep" className={contentStyle.loginSave}>로그인 유지</label> 
-                            
                         </ul>
                     </div>
 
