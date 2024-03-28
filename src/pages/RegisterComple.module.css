@@ -1,0 +1,46 @@
+.comple {
+    height: 750px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.imgT {
+        margin-top: 60px;
+        margin-bottom: 40px;
+        
+}
+.text0 {
+    padding-bottom: 50px;
+    
+}
+.text1 {
+    padding-bottom: 15px;
+}
+.p1 {
+    padding-bottom: 50px;
+}
+
+.button1 {
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: #c2c2c2;
+    width: 170px;
+    height: 45px;
+    color: white;
+    border-radius: 5px;
+    border: white;
+    
+    
+}
+.button2 {
+    margin-left: 20px;
+    background-color: #28282A;
+    width: 170px;
+    height: 45px;
+    -webkit-text-fill-color: white;
+    border-radius: 5px;
+    border: white;
+    
+
+}
+

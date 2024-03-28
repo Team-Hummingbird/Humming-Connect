@@ -1,0 +1,145 @@
+.RJdiv {
+    height: 2000px;
+
+
+}
+/* 회원가입 메인 */
+.mbShip {
+    display: inline-block;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 24px;
+    font-weight: 600;
+}
+.inline {
+    margin: 0 auto;
+    display: inline-block;
+    width: 800px;
+    padding-bottom: 60px;
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    
+}
+.inline li:nth-child(1),
+.inline li:nth-child(5) {
+    color: gray;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+input[type="text"] {
+    margin: 20px;
+    /* box-sizing: border-box; */
+    width: 800px;
+    height: 50px;
+    border: 0.5px solid #c2c2c2;
+    border-radius: 5px;
+    align-content: center;
+    padding-left: 10px;
+    -webkit-text-fill-color: #878787;
+    /* outline-width: 0;*/
+}
+
+input[type="text"]:focus, input[type="password"]:focus { border-color: #28282a;}
+
+input[type="password"] {
+    margin: 20px;
+    box-sizing: border-box;
+    width: 800px;
+    height: 50px;
+    border: 0.5px solid #c2c2c2;
+    border-radius: 5px;
+    align-content: center;
+    padding-left: 10px;
+    -webkit-text-fill-color: #878787;
+
+}
+.phoneBox {
+    margin: 20px;
+    box-sizing: border-box;
+    width: 800px;
+    height: 50px;
+    border: 0.5px solid;
+    border-radius: 5px;
+    align-content: center;
+    padding-left: 10px;
+    -webkit-text-fill-color: #878787;
+}
+.inBoxAll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.inputBox{
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.inputInnerBox{
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 20px;
+
+}
+
+.inputInnerBox span {
+    position: absolute;
+    right: 40px;
+}
+.button {
+    width: 100px; 
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #878787;
+    color: #FFFF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover {
+    width: 100px; 
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: #FFFF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.comple {
+    background-color: #D9D9D9;
+    width: 800px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    align-content: center;
+    -webkit-text-fill-color: #FFFF;
+    cursor: pointer;
+}
+.comple:hover {
+    background-color: #D9D9D9;
+    width: 800px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    align-content: center;
+    -webkit-text-fill-color: #FFFF;
+    cursor: pointer;
+}
+
+
+
