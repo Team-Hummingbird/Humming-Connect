@@ -13,7 +13,7 @@ function Sell () {
     const onClickHandler = () => {
         if (isFormFilled) {
             navigate('/selldone');
-        }
+        };
     }
 
 
@@ -39,7 +39,6 @@ function Sell () {
             setPhoneNumber(userProfile.phoneNumber);
             setEmail(userProfile.email);
         } else {
-          // 자동 채움이 비활성화된 경우, 필드를 비워줍니다.
             setName('');
             setPhoneNumber('');
             setEmail('');
