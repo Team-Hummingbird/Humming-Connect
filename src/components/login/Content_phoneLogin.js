@@ -2,7 +2,7 @@ import contentStyle from './Content_login.module.css'
 import { Link } from 'react-router-dom';
 import { getMemberList } from '../../apis/memberAPI';
 import { useState, useEffect } from 'react';
-import {isLogin, setIsLogin} from '../../components/login/Content_login'
+import popStyle from '../../components/PopUp.module.css';
 
 
 function Content_phoneLogin(){
@@ -11,7 +11,35 @@ function Content_phoneLogin(){
     const [phone , setPhone] = useState("")
     const [activeNumber , setActiveNumber] = useState()
     const [random ,setRandom]=useState();
-    const [isLogin, setIsLogin]=useState(false)
+    const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+    const [text, setText]=useState("");
+    const [text2, setText2]=useState("");
+
+    const openPopUp = () => {
+        setIsPopUpOpen(true)
+    }
+    
+    function PopUp(){
+    
+      //확인 버튼 클릭시, 팝업창 비활성화
+        const onClickHandler = (e) => {
+        e.target.parentNode.style.display = 'none';
+        e.target.parentNode.previousSibling.style.display = 'none';
+        setIsPopUpOpen(false)
+        }
+        
+    
+        return(
+        <>
+            <div className={popStyle.popBg}></div>
+            <div className={popStyle.popUp_cont}>
+                <p className={popStyle.popText}>{text}</p>
+                <p className={popStyle.popText}>{text2}</p>
+                <button className={popStyle.popBtn} onClick={onClickHandler}>확인</button>
+            </div>
+        </>
+        );
+    }
 
     useEffect(
         ()=>{
@@ -30,39 +58,42 @@ function Content_phoneLogin(){
         function randomsNumber(){
             if(phone === memberList.members[0].phoneNumber || phone === memberList.members[1].phoneNumber||phone === memberList.members[2].phoneNumber ){
                 console.log(random)
-                alert(`인증 번호가 전송 되었습니다. \n${random}`)
+                setText("인증 번호가 전송 되었습니다.")
+                setText2(`인증 번호 : ${random}`)
+                openPopUp(true)
             }else{
-                alert('전화 번호를 입력해 주세요.')
+                setText("전화 번호를 입력해 주세요.")
+                setText2("")
+                openPopUp(true)
             }
         }
 
 
     const onClickHandler=()=>{
         if(phone==="" || activeNumber===""){
-            alert('전화번호 또는 인증번호를 입력해 주세요');
-           
+            setText("가입된 전화번호가 아닙니다.")
+            setText2("확인후 다시 입력해 주세요.")
+            openPopUp(true)
             setPhone("")
             setActiveNumber("")
         }else if(phone===memberList.members[0].phoneNumber && activeNumber==random){
-            alert('로그인 완료')
             
             setPhone("")
             setActiveNumber("")
         }else if(phone===memberList.members[1].phoneNumber && activeNumber==random){
-            alert('로그인 완료')
             
             setPhone("")
             setActiveNumber("")
         }else if(phone===memberList.members[2].phoneNumber && activeNumber==random){
-            alert('로그인 완료')
-           
+
             setPhone("")
             setActiveNumber("")
         }else{
-            alert('인증번호가 틀렸습니다.')
+            setText("인증번호가 틀렸습니다")
+            setText2("확인후 다시 입력해 주세요.")
             console.log(random)
             console.log(activeNumber)
-         
+            openPopUp(true)
             setPhone("")
             setActiveNumber("")
         }
@@ -84,7 +115,7 @@ function Content_phoneLogin(){
                         </Link>
                         </li>
                     <li className={contentStyle.li}>
-                        <Link to="..phoneLogin" className={contentStyle.on} role='tab'>
+                        <Link to="../phoneLogin" className={contentStyle.on} role='tab'>
                             <span>전화번호 로그인</span>
                         </Link>
                         </li>
@@ -112,7 +143,6 @@ function Content_phoneLogin(){
                     <div>
                         <Link to="" className={contentStyle.text_button}>
                         <button onClick={onClickHandler} className={contentStyle.button}>로그인</button>
-                        {isLogin}
                         </Link>
                         <ul className={contentStyle.ul3}>
                             <li className={contentStyle.li}>
@@ -139,6 +169,7 @@ function Content_phoneLogin(){
         </div>
 
     </div>
+    {isPopUpOpen && PopUp()}
         </>
     )
 }
