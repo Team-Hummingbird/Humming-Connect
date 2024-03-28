@@ -32,16 +32,16 @@ function Detail(artWorkList) {
         <div >
             <img
             className={detailStyle.ArtImg}
-            src={art[artCode]?.imgUrl}
+            src={art[artCode -1]?.imgUrl}
             alt="작품 이미지"
             />
         </div>
 
         <div className={detailStyle.DetailBox}>
-            <p className={detailStyle.MG}>{art[artCode]?.artist}</p>
-            <p className={detailStyle.Sp}>{`${art[artCode]?.title} / ${art[artCode]?.date}`}</p>
-            <p className={detailStyle.Aoc}>{art[artCode]?.materials}</p>
-            <p className={detailStyle.Size}>{`${art[artCode]?.dimensions_in} | ${art[artCode]?.dimensions_cm}`}</p>
+            <p className={detailStyle.MG}>{art[artCode -1]?.artist}</p>
+            <p className={detailStyle.Sp}>{`${art[artCode -1]?.title} / ${art[artCode -1]?.date}`}</p>
+            <p className={detailStyle.Aoc}>{art[artCode -1]?.materials}</p>
+            <p className={detailStyle.Size}>{`${art[artCode -1]?.dimensions_in} | ${art[artCode -1]?.dimensions_cm}`}</p>
             <div className={detailStyle.Img1}>
                 <img
                 alt="액자 이미지"
@@ -56,7 +56,7 @@ function Detail(artWorkList) {
                 />
                 <p className={detailStyle.Ica}>Includes a Certificate of Authenticity</p>
             </div>
-            <p className={detailStyle.Price}>{`₩${art[artCode]?.price.toLocaleString()}`}</p>
+            <p className={detailStyle.Price}>{`₩${art[artCode -1]?.price.toLocaleString()}`}</p>
             <div className={detailStyle.ButtonBox}>
             <Link to="/buy">
             <button className={detailStyle.BuyButton}>구매하기</button>
@@ -94,8 +94,8 @@ function Detail(artWorkList) {
             <p className={detailStyle.Guarantee}>진품 보증서</p>
             </div>
             <div className={detailStyle.a2}>
-            <p className={detailStyle.Maoc}>{art[artCode]?.materials}</p>
-            <p className={detailStyle.Es}>{`${art[artCode]?.dimensions_in} | ${art[artCode]?.dimensions_cm}`}</p>
+            <p className={detailStyle.Maoc}>{art[artCode -1]?.materials}</p>
+            <p className={detailStyle.Es}>{`${art[artCode -1]?.dimensions_in} | ${art[artCode -1]?.dimensions_cm}`}</p>
             <p className={detailStyle.Lr}>Unique</p>
             <p className={detailStyle.Gt}>포함(Humming Connect 발행)</p>
             </div>
@@ -105,14 +105,14 @@ function Detail(artWorkList) {
             <div className={detailStyle.box1}>
                 <img className={detailStyle.SmallImg}
                 alt="작은 이미지"
-                src={art[artCode]?.imgUrl}
+                src={art[artCode -1]?.imgUrl}
                 />
                 <div className={detailStyle.box2}>
-                <p className={detailStyle.Mg2}>{art[artCode]?.artist}</p>
-                <p className={detailStyle.Am}>{`${art[artCode]?.title} / ${art[artCode]?.date}`}</p>
+                <p className={detailStyle.Mg2}>{art[artCode -1]?.artist}</p>
+                <p className={detailStyle.Am}>{`${art[artCode -1]?.title} / ${art[artCode -1]?.date}`}</p>
                 </div>
             </div>
-                <p className={detailStyle.Explain}>{art[artCode]?.description}</p>
+                <p className={detailStyle.Explain}>{art[artCode -1]?.description}</p>
         </div>
         </div>
 
