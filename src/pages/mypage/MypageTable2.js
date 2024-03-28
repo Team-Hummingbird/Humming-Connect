@@ -32,13 +32,13 @@ function Mypage2(props){
                                     <p className={contentStyle.text}>member since 2024</p>
                                 </li>
                             </ul>
+                        <br />
+                        <hr className={contentStyle.line} />
+                        <br />
                         </div>
 
 
             
-                        <br />
-                        <hr className={contentStyle.line} />
-                        <br />
             
                         <div className={contentStyle.mainDiv}>
                         <ul>
@@ -54,9 +54,9 @@ function Mypage2(props){
             
                         <div className={contentStyle.tableDiv}>
                             <ul className={contentStyle.ul2}>
-                                <li className={contentStyle.li2}><p>ITEM</p></li>
-                                <li className={contentStyle.li3}><p>판매일</p></li>
-                                <li className={contentStyle.li2}><p>구매자</p></li>
+                                <li className={contentStyle.li3}><p>ITEM</p></li>
+                                <li className={contentStyle.li2}><p>판매일</p></li>
+                                <li className={contentStyle.li4}><p>구매자</p></li>
                                 <li className={contentStyle.li2}><p>판매상태</p></li>
                                 <hr className={contentStyle.line2} />
                             </ul>
@@ -67,12 +67,14 @@ function Mypage2(props){
                         <div className={contentStyle.tableDiv}>
                             <ul className={contentStyle.ul2}>
                                 <li className={contentStyle.tli2}>
-                                    <img className={contentStyle.itemImgSize} src={artsy[13]?.imgUrl} alt="" />
-                                    <p className={contentStyle.li}>
+                                <Link to='../detail'><img className={contentStyle.itemImgSize} src={artsy[13]?.imgUrl} alt="" />
+                                    <p className={contentStyle.liItem2}>
                                         {artsy[13]?.artist}
                                         <p className={contentStyle.titleText}>{`${artsy[13]?.title} / ${artsy[13]?.date}`}</p>
                                         <p>{`${artsy[13]?.price?.toLocaleString()}원`}</p>
+                                        
                                     </p>
+                                    </Link>
                                     <br />
                                 </li>
                                 <li className={contentStyle.tli4}>
@@ -101,12 +103,14 @@ function Mypage2(props){
             
                             <ul className={contentStyle.ul2}>
                                 <li className={contentStyle.tli2}>
-                                    <img className={contentStyle.itemImgSize} src={artsy[35]?.imgUrl} alt="" />
-                                    <p className={contentStyle.li}>
+                                    <Link to='../detail'><img className={contentStyle.itemImgSize} src={artsy[35]?.imgUrl} alt="" />
+                                    <p className={contentStyle.liItem}>
                                         {artsy[35]?.artist}
                                         <p className={contentStyle.titleText}>{`${artsy[35]?.title} / ${artsy[35]?.date}`}</p>
                                         <p>{`${artsy[35]?.price?.toLocaleString()}원`}</p>
+                                    
                                     </p>
+                                    </Link>
                                     <br />
                                 </li>
                                 <li className={contentStyle.tli4}>
@@ -134,12 +138,14 @@ function Mypage2(props){
 
                             <ul className={contentStyle.ul2}>
                                 <li className={contentStyle.tli2}>
-                                    <img className={contentStyle.itemImgSize} src={artsy[10]?.imgUrl} alt="" />
-                                    <p className={contentStyle.li}>
+                                <Link to='../detail'><img className={contentStyle.itemImgSize} src={artsy[10]?.imgUrl} alt="" />
+                                    <p className={contentStyle.liItem2}>
                                         {artsy[10]?.artist}
                                         <p className={contentStyle.titleText}>{`${artsy[10]?.title} / ${artsy[10]?.date}`}</p>
                                         <p>{`${artsy[10]?.price?.toLocaleString()}원`}</p>
+                                        
                                     </p>
+                                    </Link>
                                     <br />
                                 </li>
                                 <li className={contentStyle.tli4}>

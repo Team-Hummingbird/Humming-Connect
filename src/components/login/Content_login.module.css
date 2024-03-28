@@ -55,6 +55,14 @@
     color: #888;
     text-align: center;
 }
+.text:hover{
+    margin: 10px;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: -.5px;
+    color: #888;
+    text-align: center;
+}
 .text_find{
     padding-bottom: 40px;
     margin: 10px;
@@ -88,6 +96,7 @@
 .loginSave{
     margin: 0px;
     font-size: 13px;
+    height: 16px;
     line-height: 15px;
     letter-spacing: -.5px;
     color: #888;
@@ -207,6 +216,17 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.button:hover{
+    height: 50px;
+    width: 410px;
+    color: white;
+    background-color: #28282a;
+    border: 2px solid #e3e3e3;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+}
 
 .easyLoginButton{
 
@@ -214,4 +234,10 @@
     width: 350px;
     border: 1px solid #e3e3e3;
     border-radius: 5px;
+}
+.easyLoginButton:hover{
+    height: 60px;
+    width: 350px;
+    border: 2px solid #28282a;
+    border-radius: 10px;
 }

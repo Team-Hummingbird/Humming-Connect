@@ -8,19 +8,19 @@ function Footer_login(){
             <div className={footerStyle.footerInner}>
                 <ul className={footerStyle.ul}>
                     <li className={footerStyle.li}>
-                        <Link to='./about'>
+                        <Link to='../about'>
                             <span className={footerStyle.text}>About us</span>
                         </Link>
                     </li>
                     <li className={footerStyle.li}>
                         <span className={footerStyle.text}>|</span>
-                        <Link>
+                        <Link to='https://www.artsy.net/terms'>
                             <span className={footerStyle.text}>Terms of Use</span>
                         </Link>
                         <span className={footerStyle.text}>|</span>
                     </li>
                     <li className={footerStyle.li}>
-                        <Link>
+                        <Link to='https://www.artsy.net/privacy'>
                             <span className={footerStyle.text}>Privacy Policy</span>
                         </Link>
                     </li>
