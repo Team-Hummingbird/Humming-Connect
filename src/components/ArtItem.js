@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function ArtItem({art}){
   return(
     <li>
-      <Link>
+      <Link to={`/Detail/${art.artCode}`}>
         <img src={art.imgUrl} alt="search result"/>
         {/*src={`${process.env.PUBLIC_URL}/img/searchIcon.svg`}*/}
         <div className={SearchStyle.descriptText}>

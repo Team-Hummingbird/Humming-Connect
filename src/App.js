@@ -49,7 +49,7 @@ export default function App() {
             <Route path="main" element={<Main artList={ArtWorkList()}/>}/> {/* 메인 */}           
             <Route path="about" element={<About/>}/> {/* 회사소개 */}
             <Route path="search" element={<Search artList={ArtWorkList()}/>}/> {/* 검색 */}
-            <Route path="detail" element={<Detail props={ArtWorkList()}/>}/> {/* 상세페이지 */}
+            <Route path="detail/:artCode" element={<Detail props={ArtWorkList()}/>}/> {/* 상세페이지 */}
             <Route path="mypage" element={<Mypage props={ArtWorkList()}/>}/> {/* 마이페이지 */}
             <Route path="mypage2" element={<Mypage2 props={ArtWorkList()}/>}/> {/* 마이페이지2 */}
             <Route path="mypage3" element={<Mypage3/>}/> {/* 마이페이지3 */}
