@@ -14,7 +14,7 @@ import Detail from './pages/Detail';
 import Mypage from './pages/mypage/Mypage';
 import Mypage2 from './pages/mypage/MypageTable2';
 import Mypage3 from './pages/mypage/MypageTable3';
-import Order from './pages/Order';
+import Order from './pages/order/Order';
 import Register from './pages/Register';
 import { ArtWorkList } from './data/ArtWorkList';
 import Sell from './pages/sell/Sell';

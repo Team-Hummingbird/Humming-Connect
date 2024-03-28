@@ -195,3 +195,260 @@
     padding-left: 20px;
     border: 1px solid #DFDFDF
 }
+.All {
+    margin-bottom: 60px;
+}
+
+.On {
+    display: flex;
+    justify-content: center;
+}
+
+.ArtImg {
+    margin-top: 115px;
+    width: 620px;
+    height: 610px;
+}
+
+.DetailBox {
+    margin-top: 115px;
+    margin-left: 50px;
+}
+
+
+.MG {
+    font-size: 28px;
+    font-weight: 700;
+    color: #28282A;
+}
+
+.Sp {
+    font-size: 28px;
+    font-weight: 500;
+    color: #28282A;
+}
+
+.Aoc {
+    font-size: 16px;
+    color: #878787;
+    margin-top: 40px;
+}
+
+.Size {
+    font-size: 16px;
+    color: #878787;
+}
+
+.Img1 {
+    display: flex;
+    margin-top: 25px;
+}
+
+.Img2 {
+    display: flex;
+}
+
+.Uw {
+    font-size: 16px;
+    color: #878787;
+    font-weight: 500;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.Ica {
+    font-size: 16px;
+    color: #878787;
+    font-weight: 500;
+    margin-left: 3px;
+}
+
+.Price {
+    font-size: 28px;
+    color: #28282A;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.ButtonBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.BuyButton {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    width: 414px;
+    height: 50px;
+    background-color: #28282A;
+    border-radius: 5px;
+    margin-top: 45px;
+}
+
+.HummingButton {
+    font-size: 16px;
+    font-weight: 700;
+    color: #28282A;
+    width: 414px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.Hr1 {
+    margin-top: 50px;
+    width: 414px;
+    color: #DFDFDF;
+}
+
+.Delivery,
+.Hcg {
+    margin-top: 20px;
+    color: #28282A;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 414px;
+}
+
+.DeliveryBtn {
+    display: flex;
+    justify-content: space-between;
+    width: 414px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.HcgBtn {
+    display: flex;
+    justify-content: space-between;
+    width: 414px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Hr2,
+.Hr3 {
+    margin-top: 20px;
+    width: 414px;
+    color: #DFDFDF;
+}
+
+.ExplanationBox {
+    display: flex;
+    width: 704px;
+    height: 142px;
+    margin-top: 25px;
+    margin-left: 80px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border: 1px solid #DFDFDF
+}
+
+.Aw {
+    margin-top: 55px;
+    margin-left: 80px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #28282A;
+}
+
+.Maoc {
+    font-size: 14px;
+    color: #878787;
+}
+
+.Es {
+    font-size: 14px;
+    color: #878787;
+    margin-top: 10px;
+}
+
+.Lr {
+    font-size: 14px;
+    color: #878787;
+    margin-top: 10px;
+}
+
+.Gt {
+    font-size: 14px;
+    color: #878787;
+    margin-top: 10px;
+}
+
+.a2 {
+    margin-left: 150px;
+}
+
+.Material {
+    font-size: 14px;
+    color: #28282A;
+}
+
+.ExplanationSize,
+.Lare,
+.Guarantee {
+    font-size: 14px;
+    color: #28282A;
+    margin-top: 10px;
+    
+}
+
+.ExplanationBox2 {
+    width: 704px;
+    height: auto;
+    margin-top: 25px;
+    margin-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #DFDFDF
+}
+
+.box1 {
+    display: flex;
+}
+
+.SmallImg {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.box2 {
+    margin-left: 10px;
+}
+
+.Mg2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #28282A;
+}
+
+.Am {
+    font-size: 14px;
+    color: #878787;
+    margin-top: 2px;
+}
+
+.Explain {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.btn,
+.btn1 {
+    margin-top: 20px;
+    background-color: #ffffff;
+    border: none;
+}
+
+.d_none {
+    display: none;
+}
