@@ -6,6 +6,13 @@ import React, { useEffect, useState } from 'react';
 
 function Sell () {
 
+    const navigate = useNavigate();
+
+    const onClickHandler = () => {
+        if (isFormFilled) {
+            navigate('/selldone');
+        }
+    }
 
     const [isInfoAutoFilled, setIsInfoAutoFilled] = useState(false);
     const [name, setName] = useState('');
@@ -19,7 +26,7 @@ function Sell () {
     const [image, setImage] = useState(null);
     const [previewUrl, setPreviewUrl] = useState('');
 
-    const handleCheckboxChange = () => {
+    const onChangeHandler = () => {
         setIsInfoAutoFilled(!isInfoAutoFilled);
     };
 
@@ -47,7 +54,7 @@ function Sell () {
             fileReader.readAsDataURL(image);
         }, [image]);
     
-        const handlerImageChange = (e) => {
+        const onChangeImgHandler = (e) => {
             if (e.target.files && e.target.files.length > 0) {
                 setImage(e.target.files[0]);
             }
@@ -59,16 +66,17 @@ function Sell () {
 
     return (
         <>
-        <div className={styles.sell}>판매 신청</div>
+        
 
 
-
+<div className={styles.sellPage}>
+<div className={styles.sell}>판매 신청</div>
     <div className={styles.infoContainer}>
         <div className={styles.sellInfo}>판매자 정보</div>
         <input
                 type="checkbox"
                 checked={isInfoAutoFilled}
-                onChange={handleCheckboxChange}
+                onChange={onChangeHandler}
                 className={styles.infoCheckbox}
             />
         <div className={styles.myInfoCheck}>내 정보 입력</div>
@@ -185,22 +193,21 @@ function Sell () {
     <div className={styles.addImg}>
         <div className={styles.addImgBlockInner}>
             <div className={styles.addImgBlock}>
-                <span>이미지 등록 Add Image</span>
-                <span className={styles.redStar}>*</span>
-                <br/>
-                <br/>
-                <span className={styles.redStar1}>※ 파일형식은 JPG, JPEG, PNG를 지원하며 파일크기는 최대 30MB까지 업로드 가능합니다.</span>
+                <span>이미지 등록 Add Image*</span>
+                <div className={styles.redStar1}>※ 파일형식은 JPG, JPEG, PNG를 지원하며 파일크기는 최대 30MB까지 업로드 가능합니다.
+                <label htmlFor="image-upload" className={styles.imageUploadButton}>
+                    이미지 등록
+                </label>
                 <input
                     type="file"
-                    onChange={handlerImageChange}
+                    onChange={onChangeImgHandler}
                     accept="image/png, image/jpeg"
                     style={{ display: 'none' }}
                     id="image-upload"
                 />
-                <label htmlFor="image-upload" className={styles.imageUploadButton}>
-                    이미지 등록
-                </label>
+                
             </div>
+        </div>
         </div>
 
         {previewUrl && (
@@ -208,10 +215,16 @@ function Sell () {
                 <img src={previewUrl} alt="Preview" className={styles.imagePreview} />
             </div>
 )}
-</div>
+
     <button
         className={`${styles.imgRegister} ${isFormFilled ? styles.imgRegisterActive : ''}`}
-            disabled={!isFormFilled}>판매 신청 등록</button>
+            onClick={onClickHandler }
+            disabled={!isFormFilled}>판매 신청 등록
+            </button>
+            
+
+            </div>
+            </div>
         </>
     );
 }
