@@ -44,7 +44,7 @@ export default function Main(artWorkList) {
     return (
       <Slider {...settings}>
         <div class={mainStyle.sliderBox}>
-          <a>
+          <Link to='./about'>
             <div class={mainStyle.imgBox}>
               <img src={`${process.env.PUBLIC_URL}/img/banner01.svg`} alt="banner image"/>
             </div>
@@ -54,10 +54,10 @@ export default function Main(artWorkList) {
               <p>새로운 문화예술 공간으로<br/>여러분을 초대합니다</p>
               <span class={mainStyle.bannerInnerBtn}>About Us</span>
             </div>
-          </a>          
+          </Link>          
         </div>
         <div class={mainStyle.sliderBox}>
-          <a>
+          <Link to='./search'>
             <div class={mainStyle.imgBox}>
               <img src={`${process.env.PUBLIC_URL}/img/banner02.jpg`} alt="banner image"/>
             </div>
@@ -67,10 +67,10 @@ export default function Main(artWorkList) {
               <p>색다른 작품을 찾으세요?<br/>바로 검색하세요</p>
               <span class={mainStyle.bannerInnerBtn_search}>Search</span>
             </div>
-          </a>
+          </Link>
         </div>
         <div class={mainStyle.sliderBox}>
-          <a>
+          <Link to='./sell'>
             <div class={mainStyle.imgBox}>
               <img src={`${process.env.PUBLIC_URL}/img/banner03.jpg`} alt="banner image"/>
             </div>
@@ -80,7 +80,7 @@ export default function Main(artWorkList) {
               <p>UNIQUE 작품의 주인을<br/>찾아드립니다</p>
               <span class={mainStyle.bannerInnerBtn_sell}>Sell</span>
             </div>
-          </a>
+          </Link>
         </div>                
       </Slider>
     );
