@@ -5,7 +5,7 @@ function HummingConnect() {
         <div className={Hc.connectBox}>
             <img 
             alt="채팅창"
-            src="img/Group 144.png"
+            src="/img/Group 144.png"
             />
         </div>
     );
