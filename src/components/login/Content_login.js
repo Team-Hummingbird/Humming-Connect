@@ -122,7 +122,7 @@ function PopUp(){
                         <input onChange={onIdChange} value={id} className={contentStyle.inputBox} type='id' id='id' placeholder='아 이 디' />
                     </div>
                     <div className={contentStyle.input}>
-                        <input onChange={onPwdChange} value={pwd} className={contentStyle.inputBox} type='password' id='password' placeholder='패 스 워 드'/>
+                        <input onKeyDown={e => e.key == "Enter" ? onClickHandler() : null } onChange={onPwdChange} value={pwd} className={contentStyle.inputBox} type='password' id='password' placeholder='패 스 워 드'/>
                     </div>
                     <div className={contentStyle.text}>
                         <ul className={contentStyle.loginCheackBox}>
